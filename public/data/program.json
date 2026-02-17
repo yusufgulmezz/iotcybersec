@@ -1,0 +1,399 @@
+{
+    "days": [
+        {
+            "day": 1,
+            "title": "1. Gün — IoT Temelleri ve Haberleşme Güvenliği",
+            "date": "Pazartesi",
+            "events": [
+                {
+                    "id": 1,
+                    "time": "09:00 - 09:30",
+                    "type": "AÇILIŞ",
+                    "title": "Açılış ve Tanışma",
+                    "description": "Etkinlik tanıtımı, program akışı ve katılımcı tanışma oturumu.",
+                    "speaker": ""
+                },
+                {
+                    "id": 2,
+                    "time": "09:30 - 10:30",
+                    "type": "TEORİK",
+                    "title": "IoT Mimarisi ve Ekosistemi",
+                    "description": "IoT katmanlı mimarisi, sensör ağları, edge computing ve bulut entegrasyonu.",
+                    "speaker": ""
+                },
+                {
+                    "id": 3,
+                    "time": "10:30 - 10:45",
+                    "type": "ARA",
+                    "title": "Kahve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 4,
+                    "time": "10:45 - 12:00",
+                    "type": "TEORİK",
+                    "title": "MQTT Protokolü ve Güvenlik Zafiyetleri",
+                    "description": "MQTT protokolünün yapısı, QoS seviyeleri, kimlik doğrulama eksiklikleri ve bilinen zafiyetler.",
+                    "speaker": ""
+                },
+                {
+                    "id": 5,
+                    "time": "12:00 - 13:30",
+                    "type": "YEMEK",
+                    "title": "Öğle Yemeği ve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 6,
+                    "time": "13:30 - 14:45",
+                    "type": "TEORİK",
+                    "title": "CoAP Protokolü ve IoT Haberleşme Güvenliği",
+                    "description": "CoAP protokolü, DTLS güvenliği ve IoT cihazlar arası güvenli haberleşme.",
+                    "speaker": ""
+                },
+                {
+                    "id": 7,
+                    "time": "14:45 - 15:00",
+                    "type": "ARA",
+                    "title": "Kahve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 8,
+                    "time": "15:00 - 16:30",
+                    "type": "UYGULAMA",
+                    "title": "Hands-on Lab: MQTT Broker Kurulumu ve Güvenlik Yapılandırması",
+                    "description": "Mosquitto MQTT broker kurulumu, TLS yapılandırması, ACL kuralları ve güvenli bağlantı testleri.",
+                    "speaker": ""
+                },
+                {
+                    "id": 9,
+                    "time": "16:30 - 16:45",
+                    "type": "ARA",
+                    "title": "Kahve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 10,
+                    "time": "16:45 - 18:00",
+                    "type": "ÇALIŞTAY",
+                    "title": "Çalıştay: IoT Ağ Trafiği Analizi",
+                    "description": "Wireshark ile MQTT/CoAP paket analizi, güvenlik açığı tespiti ve raporlama.",
+                    "speaker": ""
+                }
+            ]
+        },
+        {
+            "day": 2,
+            "title": "2. Gün — Siber Saldırılar ve Tehdit Modelleme",
+            "date": "Salı",
+            "events": [
+                {
+                    "id": 11,
+                    "time": "09:00 - 10:15",
+                    "type": "TEORİK",
+                    "title": "IoT Sistemlerine Yönelik Siber Saldırı Türleri",
+                    "description": "MITM, replay, spoofing, DoS saldırıları ve IoT'ye özgü tehdit vektörleri.",
+                    "speaker": ""
+                },
+                {
+                    "id": 12,
+                    "time": "10:15 - 10:30",
+                    "type": "ARA",
+                    "title": "Kahve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 13,
+                    "time": "10:30 - 12:00",
+                    "type": "TEORİK",
+                    "title": "Tehdit Modelleme Yaklaşımları",
+                    "description": "STRIDE, DREAD ve IoT sistemler için tehdit modelleme metodolojileri.",
+                    "speaker": ""
+                },
+                {
+                    "id": 14,
+                    "time": "12:00 - 13:30",
+                    "type": "YEMEK",
+                    "title": "Öğle Yemeği ve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 15,
+                    "time": "13:30 - 14:45",
+                    "type": "TEORİK",
+                    "title": "Güvenli Firmware Tasarımı",
+                    "description": "IoT cihazlar için güvenli firmware geliştirme pratikleri, güvenli boot ve güncelleme mekanizmaları.",
+                    "speaker": ""
+                },
+                {
+                    "id": 16,
+                    "time": "14:45 - 15:00",
+                    "type": "ARA",
+                    "title": "Kahve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 17,
+                    "time": "15:00 - 16:30",
+                    "type": "UYGULAMA",
+                    "title": "Hands-on Lab: IoT Saldırı Simülasyonu",
+                    "description": "Kontrollü ortamda MQTT üzerinden MITM ve replay saldırı senaryolarının uygulanması.",
+                    "speaker": ""
+                },
+                {
+                    "id": 18,
+                    "time": "16:30 - 16:45",
+                    "type": "ARA",
+                    "title": "Kahve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 19,
+                    "time": "16:45 - 18:00",
+                    "type": "ÇALIŞTAY",
+                    "title": "Çalıştay: Tehdit Modelleme Uygulaması",
+                    "description": "Gerçek bir IoT senaryosu üzerinde STRIDE tabanlı tehdit modelleme çalışması.",
+                    "speaker": ""
+                }
+            ]
+        },
+        {
+            "day": 3,
+            "title": "3. Gün — Saldırı Tespit Sistemleri (IDS)",
+            "date": "Çarşamba",
+            "events": [
+                {
+                    "id": 20,
+                    "time": "09:00 - 10:15",
+                    "type": "TEORİK",
+                    "title": "Saldırı Tespit Sistemlerine Giriş",
+                    "description": "IDS kavramları, NIDS vs HIDS karşılaştırması, IoT ortamlarına uygunluk analizi.",
+                    "speaker": ""
+                },
+                {
+                    "id": 21,
+                    "time": "10:15 - 10:30",
+                    "type": "ARA",
+                    "title": "Kahve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 22,
+                    "time": "10:30 - 12:00",
+                    "type": "TEORİK",
+                    "title": "Makine Öğrenmesi Tabanlı IDS Modelleri",
+                    "description": "Karar ağaçları, Random Forest, SVM ve ensemble yöntemlerle saldırı tespiti.",
+                    "speaker": ""
+                },
+                {
+                    "id": 23,
+                    "time": "12:00 - 13:30",
+                    "type": "YEMEK",
+                    "title": "Öğle Yemeği ve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 24,
+                    "time": "13:30 - 14:45",
+                    "type": "TEORİK",
+                    "title": "Derin Öğrenme ile IDS Geliştirme",
+                    "description": "LSTM, CNN ve autoencoder tabanlı anomali tespit modelleri.",
+                    "speaker": ""
+                },
+                {
+                    "id": 25,
+                    "time": "14:45 - 15:00",
+                    "type": "ARA",
+                    "title": "Kahve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 26,
+                    "time": "15:00 - 16:30",
+                    "type": "UYGULAMA",
+                    "title": "Hands-on Lab: Python ile IDS Model Geliştirme",
+                    "description": "Scikit-learn kullanarak IoT veri seti üzerinde ML tabanlı IDS modeli eğitimi.",
+                    "speaker": ""
+                },
+                {
+                    "id": 27,
+                    "time": "16:30 - 16:45",
+                    "type": "ARA",
+                    "title": "Kahve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 28,
+                    "time": "16:45 - 18:00",
+                    "type": "ÇALIŞTAY",
+                    "title": "Çalıştay: Dengesiz Veri Setleri ve SMOTE Uygulaması",
+                    "description": "IoT trafik verilerinde sınıf dengesizliği problemi ve SMOTE ile çözüm stratejileri.",
+                    "speaker": ""
+                }
+            ]
+        },
+        {
+            "day": 4,
+            "title": "4. Gün — Açıklanabilir Yapay Zeka (XAI) ve IDS",
+            "date": "Perşembe",
+            "events": [
+                {
+                    "id": 29,
+                    "time": "09:00 - 10:15",
+                    "type": "TEORİK",
+                    "title": "Açıklanabilir Yapay Zeka (XAI) Nedir?",
+                    "description": "XAI kavramları, model şeffaflığı ve güvenilirlik, kara kutu vs açıklanabilir modeller.",
+                    "speaker": ""
+                },
+                {
+                    "id": 30,
+                    "time": "10:15 - 10:30",
+                    "type": "ARA",
+                    "title": "Kahve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 31,
+                    "time": "10:30 - 12:00",
+                    "type": "TEORİK",
+                    "title": "SHAP ve LIME ile Model Yorumlama",
+                    "description": "SHAP değerleri, LIME açıklamaları ve IDS kararlarının görselleştirilmesi.",
+                    "speaker": ""
+                },
+                {
+                    "id": 32,
+                    "time": "12:00 - 13:30",
+                    "type": "YEMEK",
+                    "title": "Öğle Yemeği ve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 33,
+                    "time": "13:30 - 14:45",
+                    "type": "UYGULAMA",
+                    "title": "Hands-on Lab: SHAP ile IDS Model Analizi",
+                    "description": "Eğitilmiş IDS modeline SHAP uygulanması, özellik önem sıralaması ve görselleştirme.",
+                    "speaker": ""
+                },
+                {
+                    "id": 34,
+                    "time": "14:45 - 15:00",
+                    "type": "ARA",
+                    "title": "Kahve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 35,
+                    "time": "15:00 - 16:30",
+                    "type": "UYGULAMA",
+                    "title": "Hands-on Lab: LIME ile Saldırı Sınıflandırma Açıklamaları",
+                    "description": "LIME yöntemi ile bireysel saldırı tespitlerinin açıklanması ve raporlanması.",
+                    "speaker": ""
+                },
+                {
+                    "id": 36,
+                    "time": "16:30 - 16:45",
+                    "type": "ARA",
+                    "title": "Kahve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 37,
+                    "time": "16:45 - 18:00",
+                    "type": "ÇALIŞTAY",
+                    "title": "Çalıştay: XAI Destekli IDS Dashboard Tasarımı",
+                    "description": "Gerçek zamanlı IDS çıktılarını XAI ile zenginleştiren bir dashboard prototipi oluşturma.",
+                    "speaker": ""
+                }
+            ]
+        },
+        {
+            "day": 5,
+            "title": "5. Gün — Entegrasyon, Vaka Analizi ve Kapanış",
+            "date": "Cuma",
+            "events": [
+                {
+                    "id": 38,
+                    "time": "09:00 - 10:15",
+                    "type": "TEORİK",
+                    "title": "Siber-Fiziksel Sistemlerde Proaktif Savunma",
+                    "description": "IIoT ve SCADA sistemlerinde proaktif güvenlik stratejileri ve karar destek mekanizmaları.",
+                    "speaker": ""
+                },
+                {
+                    "id": 39,
+                    "time": "10:15 - 10:30",
+                    "type": "ARA",
+                    "title": "Kahve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 40,
+                    "time": "10:30 - 12:00",
+                    "type": "ÇALIŞTAY",
+                    "title": "Çalıştay: Gerçek Dünya Vaka Analizi",
+                    "description": "Endüstriyel IoT ortamında gerçek bir siber saldırı senaryosunun uçtan uca analizi.",
+                    "speaker": ""
+                },
+                {
+                    "id": 41,
+                    "time": "12:00 - 13:30",
+                    "type": "YEMEK",
+                    "title": "Öğle Yemeği ve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 42,
+                    "time": "13:30 - 15:00",
+                    "type": "UYGULAMA",
+                    "title": "Hands-on Lab: Entegre IoT Güvenlik Çözümü",
+                    "description": "MQTT güvenliği + ML tabanlı IDS + XAI entegrasyonu: Uçtan uca bir güvenlik çözümü geliştirme.",
+                    "speaker": ""
+                },
+                {
+                    "id": 43,
+                    "time": "15:00 - 15:15",
+                    "type": "ARA",
+                    "title": "Kahve Arası",
+                    "description": "",
+                    "speaker": ""
+                },
+                {
+                    "id": 44,
+                    "time": "15:15 - 16:15",
+                    "type": "ÇALIŞTAY",
+                    "title": "Grup Sunumları ve Değerlendirme",
+                    "description": "Katılımcı gruplarının hafta boyunca geliştirdikleri çözümlerin sunumu ve değerlendirmesi.",
+                    "speaker": ""
+                },
+                {
+                    "id": 45,
+                    "time": "16:15 - 17:00",
+                    "type": "KAPANIŞ",
+                    "title": "Kapanış Değerlendirme ve Katılım Sertifikası",
+                    "description": "Etkinlik değerlendirmesi, geri bildirim ve katılım sertifikalarının dağıtımı.",
+                    "speaker": ""
+                }
+            ]
+        }
+    ]
+}

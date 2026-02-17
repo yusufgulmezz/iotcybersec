@@ -1,0 +1,52 @@
+{
+    "sections": [
+        {
+            "id": "communication-security",
+            "title": "Haberleşme Güvenliği",
+            "icon": "Shield",
+            "description": "MQTT ve CoAP protokollerinde güvenlik zafiyetleri ve önlemler.",
+            "details": [
+                "MQTT protokolünün yapısı ve güvenlik açıkları",
+                "CoAP protokolü ve IoT haberleşme güvenliği",
+                "TLS/DTLS ile güvenli haberleşme kanalları",
+                "Kimlik doğrulama ve yetkilendirme mekanizmaları"
+            ]
+        },
+        {
+            "id": "ids",
+            "title": "Saldırı Tespit Sistemleri (IDS)",
+            "icon": "Radar",
+            "description": "IoT/IIoT ortamlarında NIDS ve HIDS yaklaşımlarının karşılaştırılması.",
+            "details": [
+                "Ağ tabanlı saldırı tespit sistemleri (NIDS)",
+                "Host tabanlı saldırı tespit sistemleri (HIDS)",
+                "IoT ortamlarına özgü IDS mimarileri",
+                "Gerçek zamanlı tehdit algılama stratejileri"
+            ]
+        },
+        {
+            "id": "advanced-analytics",
+            "title": "Gelişmiş Analitik",
+            "icon": "BrainCircuit",
+            "description": "Makine öğrenmesi ve derin öğrenme tabanlı IDS yaklaşımları, sınıf dengesizliği (SMOTE) çözümleri.",
+            "details": [
+                "Makine öğrenmesi ile anomali tespiti",
+                "Derin öğrenme tabanlı IDS modelleri",
+                "SMOTE ve dengesiz veri seti çözümleri",
+                "IoT trafik verilerinde sınıf dengesizliği analizi"
+            ]
+        },
+        {
+            "id": "xai",
+            "title": "Açıklanabilir Yapay Zeka (XAI)",
+            "icon": "Eye",
+            "description": "SHAP ve LIME gibi yöntemlerle IDS kararlarının açıklanabilirliği ve insan-odaklı yorumlanması.",
+            "details": [
+                "SHAP (SHapley Additive exPlanations) yöntemi",
+                "LIME (Local Interpretable Model-agnostic Explanations)",
+                "IDS karar süreçlerinin görselleştirilmesi",
+                "Model güvenilirliği ve şeffaflık analizi"
+            ]
+        }
+    ]
+}

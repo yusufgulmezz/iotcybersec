@@ -1,0 +1,125 @@
+.scopeSection {
+    padding: var(--section-padding);
+    background: var(--bg-secondary);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: var(--container-padding);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background: var(--bg-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    transition: all var(--transition-normal);
+}
+
+.card:hover {
+    border-color: var(--border-accent);
+    background: var(--bg-glass-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--accent-glow);
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.iconBox {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: rgba(0, 212, 170, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-primary);
+    flex-shrink: 0;
+}
+
+.card:nth-child(2) .iconBox {
+    background: rgba(0, 180, 216, 0.1);
+    color: #00b4d8;
+}
+
+.card:nth-child(3) .iconBox {
+    background: rgba(124, 58, 237, 0.1);
+    color: #a78bfa;
+}
+
+.card:nth-child(4) .iconBox {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+
+.cardTitle {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.cardDesc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.detailList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detailItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.detailDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+    flex-shrink: 0;
+    margin-top: 8px;
+}
+
+.card:nth-child(2) .detailDot {
+    background: #00b4d8;
+}
+
+.card:nth-child(3) .detailDot {
+    background: #a78bfa;
+}
+
+.card:nth-child(4) .detailDot {
+    background: #f59e0b;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 28px;
+    }
+}

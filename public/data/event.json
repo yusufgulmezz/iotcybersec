@@ -1,0 +1,49 @@
+{
+    "name": "IoTCyberSec",
+    "fullName": "IoT Siber Güvenlik Eğitim Etkinliği",
+    "slogan": "IoT Ekosistemlerinde Siber Güvenlik: Tehditlerden Savunmaya",
+    "date": "2025 Yaz Dönemi",
+    "location": "Sakarya Üniversitesi",
+    "duration": "5 Gün",
+    "speakerCount": 10,
+    "participantQuota": 40,
+    "isFree": true,
+    "supportedBy": "TÜBİTAK 2237-A Bilimsel Eğitim Etkinlikleri Desteği",
+    "topic": "IoT ekosistemlerinde artan cihaz sayısı ve dağıtık mimariler sonucu ortaya çıkan siber güvenlik riskleri, güvenli mimari tasarımı ve koruyucu güvenlik mekanizmalarının uygulanması.",
+    "participantSelection": "Lisans, lisansüstü öğrenciler ve araştırmacılar arasından ilgili adaylar seçilecektir. Kontenjan sınırlı olup başvurular değerlendirme yoluyla belirlenecektir.",
+    "activityArea": "Mühendislik ve Teknoloji Alanları",
+    "discipline": "Bilgisayar ve Bilişim Bilimleri (Bilgisayar Mühendisliği, Siber Güvenlik, Yazılım Mühendisliği, Bilişim Sistemleri Mühendisliği) - Nesnelerin İnterneti ve Siber Güvenlik",
+    "rdAndInnovation": "IoT/IIoT sistemlerinde tehdit modelleme yaklaşımları, güvenli firmware tasarımı ve makine öğrenmesi tabanlı saldırı tespit sistemlerinin (IDS) geliştirilmesi gibi yenilikçi siber savunma yöntemlerini kapsamaktadır. Açıklanabilir AI (XAI) yöntemlerinin IDS mimarilerine entegrasyonu gibi güncel Ar-Ge başlıklarını uygulamalı olarak ele alır.",
+    "keywords": [
+        "IoT Güvenliği",
+        "MQTT Zafiyetleri",
+        "Saldırı Tespit Sistemleri (IDS)",
+        "Makine Öğrenmesi",
+        "IoT",
+        "Nesnelerin İnterneti",
+        "Siber Güvenlik"
+    ],
+    "priorityArea": "Nesnelerin İnterneti ve Siber Güvenlik",
+    "purpose": [
+        "Katılımcılara IoT mimarileri ve haberleşme protokollerini teorik ve uygulamalı olarak öğretmek.",
+        "IoT sistemlerine yönelik yaygın siber saldırı türlerini (MITM, replay, spoofing) analiz edebilecek yetkinlik kazandırmak.",
+        "Uygulamalı çalıştaylar ve gerçek senaryolar üzerinden siber güvenlik analizi yapma becerisi sağlamak."
+    ],
+    "targetAudience": {
+        "profile": "Bilgisayar, Yazılım, Elektrik-Elektronik Mühendisliği gibi ilgili bölümlerin lisans (üst sınıflar) ve lisansüstü öğrencileri.",
+        "prerequisites": "Temel düzeyde Python bilgisi ve ağ (Networking) kavramlarına aşinalık aranacaktır.",
+        "selectionCriteria": "Akademik başarı ortalaması (GNO), IoT/Güvenlik alanındaki çalışma motivasyonu ve farklı üniversitelerden/bölgelerden katılım dengesi gözetilecektir.",
+        "priority": "Bu alanda tez çalışması yapan lisansüstü öğrencilere öncelik verilecektir.",
+        "quality": "Üniversitelerin Bilgisayar, Yazılım veya Elektrik-Elektronik Mühendisliği bölümlerinde öğrenim gören, temel ağ bilgisine sahip lisans veya lisansüstü öğrencileridir. Farklı üniversite ve bölgelerden gelen başvurulara öncelik verilerek yaygın katılım sağlanacaktır."
+    },
+    "teachingMethods": "Eğitim programı; teorik dersler, etkileşimli çalıştaylar ve gerçek veri setleri üzerinden yürütülen uygulamalı laboratuvar oturumlarını (Hands-on Labs) içeren hibrit bir metodoloji ile tasarlanmıştır. Program kapsamında; MQTT protokol zafiyetleri, dengesiz IoT veri setlerinde makine öğrenmesi tabanlı IDS modelleme ve SHAP/LIME gibi yöntemlerle Açıklanabilir Yapay Zeka (XAI) uygulamaları, gerçek vaka analizleri (case studies) üzerinden işlenecektir.",
+    "impact": [
+        "Etkinlik sonunda katılımcıların IoT güvenliği konusunda uzmanlaşarak 'Milli Teknoloji Hamlesi' kapsamında kritik altyapıların korunmasında görev alabilecek nitelikli insan kaynağına dönüşmesi beklenmektedir.",
+        "Ayrıca, eğitim materyalleri ve sunumlar etkinlik web sitesi üzerinden açık kaynak olarak paylaşılarak akademik camia için sürekli bir referans kaynağı oluşturulacaktır.",
+        "Katılımcıların iaşe ve konaklama giderleri TÜBİTAK desteğiyle karşılanarak fırsat eşitliği sağlanacaktır."
+    ],
+    "organizationCommittee": "Etkinlik kadrosu, TÜBİTAK 2237-A kriterlerine uygun olarak en az 3 farklı üniversite ve kuruluştan gelen bilim insanlarından oluşan bir Düzenleme Kurulu tarafından sevk ve idare edilmektedir.",
+    "scienceCommittee": "Proje yürütücüsü, alanında doktora derecesine sahip bir akademisyendir. Bilim Kurulu, etkinlikteki bilimsel süreçlerin denetlenmesi ve akademik kalitenin korunmasından sorumludur.",
+    "instructorQuality": "Eğitici kadrosu, ARBİS özgeçmişlerinde görüleceği üzere; özellikle MQTT protokol güvenliği, endüstriyel sistemlerde saldırı tespiti (IDS) ve siber güvenlikte makine öğrenmesi uygulamaları üzerine ulusal ve uluslararası literatürde projeleri ve yayınları bulunan uzmanlardan oluşmaktadır.",
+    "advisors": "Eğiticiler/Danışmanlar, en az lisans mezunu olup kurul üyeleri arasından, teorik bilgiyi gerçek senaryolar ve vaka analizleriyle (Hands-on Labs) birleştirebilecek yetkinlikteki seçilmiştir."
+}

@@ -1,0 +1,58 @@
+{
+    "speakers": [
+        {
+            "id": 1,
+            "name": "Prof. Dr. Akademisyen",
+            "title": "Prof. Dr.",
+            "institution": "Sakarya Üniversitesi",
+            "department": "Bilgisayar Mühendisliği",
+            "expertise": "IoT Güvenliği, MQTT Protokol Analizi",
+            "role": "Proje Yürütücüsü"
+        },
+        {
+            "id": 2,
+            "name": "Doç. Dr. Akademisyen",
+            "title": "Doç. Dr.",
+            "institution": "Düzce Üniversitesi",
+            "department": "Yazılım Mühendisliği",
+            "expertise": "Makine Öğrenmesi, Saldırı Tespit Sistemleri",
+            "role": "Eğitici"
+        },
+        {
+            "id": 3,
+            "name": "Dr. Öğr. Üyesi Akademisyen",
+            "title": "Dr. Öğr. Üyesi",
+            "institution": "Kocaeli Üniversitesi",
+            "department": "Bilişim Sistemleri Mühendisliği",
+            "expertise": "Açıklanabilir Yapay Zeka (XAI), Derin Öğrenme",
+            "role": "Eğitici"
+        },
+        {
+            "id": 4,
+            "name": "Dr. Öğr. Üyesi Akademisyen",
+            "title": "Dr. Öğr. Üyesi",
+            "institution": "Sakarya Üniversitesi",
+            "department": "Siber Güvenlik",
+            "expertise": "Ağ Güvenliği, Penetrasyon Testi",
+            "role": "Eğitici"
+        },
+        {
+            "id": 5,
+            "name": "Prof. Dr. Akademisyen",
+            "title": "Prof. Dr.",
+            "institution": "İstanbul Teknik Üniversitesi",
+            "department": "Bilgisayar Mühendisliği",
+            "expertise": "IoT Mimarisi, Gömülü Sistemler",
+            "role": "Düzenleme Kurulu Üyesi"
+        },
+        {
+            "id": 6,
+            "name": "Doç. Dr. Akademisyen",
+            "title": "Doç. Dr.",
+            "institution": "Sakarya Üniversitesi",
+            "department": "Elektrik-Elektronik Mühendisliği",
+            "expertise": "Firmware Güvenliği, SCADA Sistemleri",
+            "role": "Eğitici"
+        }
+    ]
+}
