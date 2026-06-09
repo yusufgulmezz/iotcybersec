@@ -84,6 +84,77 @@ export interface SpeakersData {
   speakers: Speaker[];
 }
 
+// Portfolyo
+export type PortfolioFieldColor = 'primary' | 'secondary' | 'tertiary' | 'warning';
+
+export interface PortfolioSocial {
+  github?: string;
+  linkedin?: string;
+  twitter?: string;
+  website?: string;
+  email?: string;
+}
+
+export interface PortfolioSkillGroup {
+  category: string;
+  items: string[];
+}
+
+export interface PortfolioExperience {
+  title: string;
+  company: string;
+  period: string;
+  location?: string;
+  description: string;
+  highlights?: string[];
+}
+
+export interface PortfolioProject {
+  name: string;
+  description: string;
+  tech: string[];
+  link?: string;
+  repo?: string;
+  highlight?: boolean;
+}
+
+export interface PortfolioEducation {
+  degree: string;
+  school: string;
+  year: string;
+  detail?: string;
+}
+
+export interface PortfolioCertification {
+  name: string;
+  issuer: string;
+  year: string;
+}
+
+export interface PortfolioPerson {
+  slug: string;
+  name: string;
+  title: string;
+  field: string;
+  fieldColor: PortfolioFieldColor;
+  shortBio: string;
+  avatar: string;
+  location?: string;
+  yearsOfExperience?: number;
+  available?: boolean;
+  social?: PortfolioSocial;
+  about?: string;
+  skills?: PortfolioSkillGroup[];
+  experience?: PortfolioExperience[];
+  projects?: PortfolioProject[];
+  education?: PortfolioEducation[];
+  certifications?: PortfolioCertification[];
+}
+
+export interface PortfolioData {
+  people: PortfolioPerson[];
+}
+
 // Başvuru Formu
 export interface ApplicationFormData {
   firstName: string;

@@ -7,6 +7,8 @@ import AboutPage from './pages/AboutPage';
 import ProgramPage from './pages/ProgramPage';
 import ApplicationPage from './pages/ApplicationPage';
 import ContactPage from './pages/ContactPage';
+import PortfolioPage from './pages/PortfolioPage';
+import PortfolioDetailPage from './pages/PortfolioDetailPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -18,13 +20,15 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/hakkinda" element={<AboutPage />} />
         <Route path="/program" element={<ProgramPage />} />
+        <Route path="/portfolyo" element={<PortfolioPage />} />
+        <Route path="/portfolyo/:slug" element={<PortfolioDetailPage />} />
         <Route path="/basvuru" element={<ApplicationPage />} />
         <Route path="/iletisim" element={<ContactPage />} />
       </Routes>

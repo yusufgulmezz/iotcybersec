@@ -1,0 +1,161 @@
+{
+  "people": [
+    {
+      "slug": "elif-demir",
+      "name": "Elif Demir",
+      "title": "Siber Güvenlik Araştırmacısı",
+      "field": "Siber Güvenlik",
+      "fieldColor": "primary",
+      "shortBio": "IoT ekosistemlerinde saldırı tespiti ve MQTT protokol güvenliği üzerine 7+ yıllık deneyim. TÜBİTAK 2237-A eğitici kadrosunda.",
+      "avatar": "ED",
+      "location": "Ankara, TR",
+      "yearsOfExperience": 7,
+      "available": true,
+      "social": {
+        "github": "https://github.com/",
+        "linkedin": "https://linkedin.com/",
+        "twitter": "https://twitter.com/",
+        "website": "https://example.com/",
+        "email": "elif.demir@example.com"
+      },
+      "about": "Siber güvenlik alanında akademik araştırmalar ile endüstriyel projeleri bir arada yürüten bir araştırmacıyım. Doktora çalışmamı MQTT tabanlı IoT ağlarında makine öğrenmesi destekli saldırı tespit sistemleri (IDS) üzerine tamamladım. Kurumsal SOC ekiplerine danışmanlık yapıyor, IoT güvenliği üzerine uygulamalı çalıştaylar veriyorum.",
+      "skills": [
+        {
+          "category": "Güvenlik",
+          "items": ["Penetrasyon Testi", "MQTT/CoAP Güvenliği", "IDS/IPS", "Threat Modelling", "Reverse Engineering", "Network Forensics"]
+        },
+        {
+          "category": "ML / Veri",
+          "items": ["Python", "PyTorch", "scikit-learn", "Pandas", "Anomaly Detection"]
+        },
+        {
+          "category": "Araçlar",
+          "items": ["Wireshark", "Burp Suite", "Nmap", "Mosquitto", "Suricata", "Zeek"]
+        },
+        {
+          "category": "Bulut & Altyapı",
+          "items": ["Docker", "Kubernetes", "AWS IoT Core", "Linux Hardening"]
+        }
+      ],
+      "experience": [
+        {
+          "title": "Kıdemli Güvenlik Araştırmacısı",
+          "company": "CyberLab Türkiye",
+          "period": "2023 — Günümüz",
+          "location": "Ankara",
+          "description": "IoT güvenliği Ar-Ge ekibini yönetiyor, kritik altyapılar için ML tabanlı IDS çözümleri tasarlıyorum.",
+          "highlights": [
+            "MQTT broker'ları için gerçek zamanlı anomali tespit motoru geliştirildi",
+            "5+ kurumsal kuruluşta IoT pentest çalışması yürütüldü",
+            "Açık kaynak Mosquitto güvenlik eklentisi yayınlandı"
+          ]
+        },
+        {
+          "title": "Güvenlik Mühendisi",
+          "company": "SecureNet A.Ş.",
+          "period": "2020 — 2023",
+          "location": "İstanbul",
+          "description": "Kurumsal müşteriler için SOC kurulumu, SIEM entegrasyonu ve tehdit avı operasyonları.",
+          "highlights": [
+            "Splunk + Suricata ile özelleştirilmiş tehdit avcılığı playbook'ları oluşturuldu",
+            "Kritik öneme sahip 12 olay müdahalesi yönetildi"
+          ]
+        },
+        {
+          "title": "Araştırma Asistanı",
+          "company": "ODTÜ — Bilgisayar Mühendisliği",
+          "period": "2018 — 2020",
+          "location": "Ankara",
+          "description": "MQTT trafik akışlarında derin öğrenme tabanlı saldırı tespiti üzerine doktora araştırması."
+        }
+      ],
+      "projects": [
+        {
+          "name": "MQTT-Guard",
+          "description": "Mosquitto broker'a entegre olan, hibrit ML modelleriyle gerçek zamanlı anomali ve DoS saldırısı tespiti yapan açık kaynak eklenti.",
+          "tech": ["Python", "PyTorch", "Mosquitto", "Docker"],
+          "repo": "https://github.com/",
+          "link": "https://example.com/mqtt-guard",
+          "highlight": true
+        },
+        {
+          "name": "IoT Honeynet",
+          "description": "Düşük etkileşimli IoT honeypot ağı; saldırı imzalarını toplayıp tehdit istihbaratı feed'i üretir.",
+          "tech": ["Go", "Suricata", "ClickHouse", "Grafana"],
+          "repo": "https://github.com/"
+        },
+        {
+          "name": "SmartHome Pentest Toolkit",
+          "description": "Akıllı ev cihazlarına özel Zigbee/MQTT/BLE saldırı modülleri içeren penetrasyon testi araç seti.",
+          "tech": ["Python", "Scapy", "Bettercap", "GNU Radio"],
+          "repo": "https://github.com/"
+        },
+        {
+          "name": "TÜBİTAK 2237-A Eğitim Materyali",
+          "description": "IoTCyberSec etkinliği kapsamında hazırlanan uygulamalı laboratuvar dokümanları ve örnek veri setleri.",
+          "tech": ["Jupyter", "Mosquitto", "Wireshark"],
+          "link": "https://example.com/"
+        }
+      ],
+      "education": [
+        {
+          "degree": "Doktora, Bilgisayar Mühendisliği",
+          "school": "Orta Doğu Teknik Üniversitesi",
+          "year": "2018 — 2023",
+          "detail": "Tez: MQTT Tabanlı IoT Ağlarında Derin Öğrenme Destekli Saldırı Tespit Sistemleri"
+        },
+        {
+          "degree": "Yüksek Lisans, Bilgi Güvenliği Mühendisliği",
+          "school": "Gazi Üniversitesi",
+          "year": "2015 — 2017"
+        },
+        {
+          "degree": "Lisans, Bilgisayar Mühendisliği",
+          "school": "Hacettepe Üniversitesi",
+          "year": "2011 — 2015"
+        }
+      ],
+      "certifications": [
+        { "name": "OSCP — Offensive Security Certified Professional", "issuer": "Offensive Security", "year": "2022" },
+        { "name": "CEH — Certified Ethical Hacker", "issuer": "EC-Council", "year": "2020" },
+        { "name": "AWS Certified Security — Specialty", "issuer": "Amazon Web Services", "year": "2023" }
+      ]
+    },
+    {
+      "slug": "mert-kaya",
+      "name": "Mert Kaya",
+      "title": "Senior Mobile Developer",
+      "field": "Mobil Geliştirme",
+      "fieldColor": "secondary",
+      "shortBio": "iOS ve Android tarafında 6+ yıllık deneyim. React Native ile cross-platform performans odaklı çözümler.",
+      "avatar": "MK",
+      "location": "İstanbul, TR",
+      "yearsOfExperience": 6,
+      "available": false
+    },
+    {
+      "slug": "burak-arslan",
+      "name": "Burak Arslan",
+      "title": "Backend Engineer",
+      "field": "Backend",
+      "fieldColor": "tertiary",
+      "shortBio": "Yüksek trafikli, dağıtık sistemler ve event-driven mimari üzerine uzman. Go, Kafka, Kubernetes.",
+      "avatar": "BA",
+      "location": "İzmir, TR",
+      "yearsOfExperience": 8,
+      "available": false
+    },
+    {
+      "slug": "deniz-ozturk",
+      "name": "Deniz Öztürk",
+      "title": "Medikal IoT (MIoT) Araştırmacısı",
+      "field": "MIoT",
+      "fieldColor": "warning",
+      "shortBio": "Giyilebilir sağlık cihazları ve klinik IoT çözümleri üzerine çalışıyor. Sinyal işleme & gömülü sistemler.",
+      "avatar": "DÖ",
+      "location": "Ankara, TR",
+      "yearsOfExperience": 5,
+      "available": false
+    }
+  ]
+}

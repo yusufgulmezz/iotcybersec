@@ -7,6 +7,19 @@
     <meta name="description" content="IoTCyberSec — IoT Ekosistemlerinde Siber Güvenlik Eğitim Etkinliği. TÜBİTAK 2237-A destekli, ücretsiz katılım." />
     <meta name="keywords" content="IoT Güvenliği, MQTT, IDS, Makine Öğrenmesi, Siber Güvenlik, TÜBİTAK" />
     <title>IoTCyberSec — IoT Siber Güvenlik Eğitim Etkinliği</title>
+    <script>
+      // GitHub Pages SPA redirect: 404.html'in /?/path/... şeklinde yönlendirdiği
+      // adresi tarayıcı geçmişinde gerçek yola çevirir.
+      (function () {
+        var l = window.location;
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function (s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, '', l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

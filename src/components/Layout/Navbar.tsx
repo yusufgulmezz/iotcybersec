@@ -7,9 +7,15 @@ const navItems = [
     { path: '/', label: 'Ana Sayfa' },
     { path: '/hakkinda', label: 'Hakkında' },
     { path: '/program', label: 'Program' },
+    { path: '/portfolyo', label: 'Portfolyo' },
     { path: '/basvuru', label: 'Başvuru' },
     { path: '/iletisim', label: 'İletişim' },
 ];
+
+function isActive(currentPath: string, itemPath: string): boolean {
+    if (itemPath === '/') return currentPath === '/';
+    return currentPath === itemPath || currentPath.startsWith(`${itemPath}/`);
+}
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -42,7 +48,7 @@ export default function Navbar() {
                             <li key={item.path}>
                                 <Link
                                     to={item.path}
-                                    className={`${styles.navLink} ${location.pathname === item.path ? styles.active : ''}`}
+                                    className={`${styles.navLink} ${isActive(location.pathname, item.path) ? styles.active : ''}`}
                                 >
                                     {item.label}
                                 </Link>
@@ -70,7 +76,7 @@ export default function Navbar() {
                         <li key={item.path}>
                             <Link
                                 to={item.path}
-                                className={`${styles.mobileNavLink} ${location.pathname === item.path ? styles.active : ''}`}
+                                className={`${styles.mobileNavLink} ${isActive(location.pathname, item.path) ? styles.active : ''}`}
                             >
                                 {item.label}
                             </Link>
