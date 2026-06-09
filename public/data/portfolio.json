@@ -12,6 +12,10 @@
       "location": "İstanbul, TR",
       "yearsOfExperience": 2,
       "available": true,
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/rifatozturk061/",
+        "medium": "https://medium.com/@rifat.ozturk1"
+      },
       "about": "Sakarya Üniversitesi Bilişim Sistemleri Mühendisliği mezunuyum; aynı üniversitede Bilgisayar Mühendisliği alanında yüksek lisansıma devam ediyorum. Profesyonel hayatıma TİSAŞ'ta üretim/kalite ve iOS geliştirme stajlarıyla başladım. Sakarya Teknokent'te React ve TypeScript ile G-Mentor mentor-mentee takip platformunu geliştirdim. Şu an Sigorta Tahkim Komisyonu'nda Node.js tabanlı backend servisleri ve REST API entegrasyonları üzerinde çalışıyor; performans ve güvenilirlik odaklı çözümler üretiyorum.",
       "skills": [
         {
@@ -104,6 +108,8 @@
       "available": true,
       "social": {
         "github": "https://github.com/yusufgulmezz",
+        "linkedin": "https://www.linkedin.com/in/yusufglmz/",
+        "website": "https://yusufgulmezz.github.io/portfolio/",
         "behance": "https://www.behance.net/designeverythink",
         "medium": "https://yusufgulmezz.medium.com/"
       },
