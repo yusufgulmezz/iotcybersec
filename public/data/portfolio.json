@@ -1,127 +1,6 @@
 {
   "people": [
     {
-      "slug": "elif-demir",
-      "name": "Elif Demir",
-      "title": "Siber Güvenlik Araştırmacısı",
-      "field": "Siber Güvenlik",
-      "fieldColor": "primary",
-      "shortBio": "IoT ekosistemlerinde saldırı tespiti ve MQTT protokol güvenliği üzerine 7+ yıllık deneyim. TÜBİTAK 2237-A eğitici kadrosunda.",
-      "avatar": "ED",
-      "location": "Ankara, TR",
-      "yearsOfExperience": 7,
-      "available": true,
-      "social": {
-        "github": "https://github.com/",
-        "linkedin": "https://linkedin.com/",
-        "twitter": "https://twitter.com/",
-        "website": "https://example.com/",
-        "email": "elif.demir@example.com"
-      },
-      "about": "Siber güvenlik alanında akademik araştırmalar ile endüstriyel projeleri bir arada yürüten bir araştırmacıyım. Doktora çalışmamı MQTT tabanlı IoT ağlarında makine öğrenmesi destekli saldırı tespit sistemleri (IDS) üzerine tamamladım. Kurumsal SOC ekiplerine danışmanlık yapıyor, IoT güvenliği üzerine uygulamalı çalıştaylar veriyorum.",
-      "skills": [
-        {
-          "category": "Güvenlik",
-          "items": ["Penetrasyon Testi", "MQTT/CoAP Güvenliği", "IDS/IPS", "Threat Modelling", "Reverse Engineering", "Network Forensics"]
-        },
-        {
-          "category": "ML / Veri",
-          "items": ["Python", "PyTorch", "scikit-learn", "Pandas", "Anomaly Detection"]
-        },
-        {
-          "category": "Araçlar",
-          "items": ["Wireshark", "Burp Suite", "Nmap", "Mosquitto", "Suricata", "Zeek"]
-        },
-        {
-          "category": "Bulut & Altyapı",
-          "items": ["Docker", "Kubernetes", "AWS IoT Core", "Linux Hardening"]
-        }
-      ],
-      "experience": [
-        {
-          "title": "Kıdemli Güvenlik Araştırmacısı",
-          "company": "CyberLab Türkiye",
-          "period": "2023 — Günümüz",
-          "location": "Ankara",
-          "description": "IoT güvenliği Ar-Ge ekibini yönetiyor, kritik altyapılar için ML tabanlı IDS çözümleri tasarlıyorum.",
-          "highlights": [
-            "MQTT broker'ları için gerçek zamanlı anomali tespit motoru geliştirildi",
-            "5+ kurumsal kuruluşta IoT pentest çalışması yürütüldü",
-            "Açık kaynak Mosquitto güvenlik eklentisi yayınlandı"
-          ]
-        },
-        {
-          "title": "Güvenlik Mühendisi",
-          "company": "SecureNet A.Ş.",
-          "period": "2020 — 2023",
-          "location": "İstanbul",
-          "description": "Kurumsal müşteriler için SOC kurulumu, SIEM entegrasyonu ve tehdit avı operasyonları.",
-          "highlights": [
-            "Splunk + Suricata ile özelleştirilmiş tehdit avcılığı playbook'ları oluşturuldu",
-            "Kritik öneme sahip 12 olay müdahalesi yönetildi"
-          ]
-        },
-        {
-          "title": "Araştırma Asistanı",
-          "company": "ODTÜ — Bilgisayar Mühendisliği",
-          "period": "2018 — 2020",
-          "location": "Ankara",
-          "description": "MQTT trafik akışlarında derin öğrenme tabanlı saldırı tespiti üzerine doktora araştırması."
-        }
-      ],
-      "projects": [
-        {
-          "name": "MQTT-Guard",
-          "description": "Mosquitto broker'a entegre olan, hibrit ML modelleriyle gerçek zamanlı anomali ve DoS saldırısı tespiti yapan açık kaynak eklenti.",
-          "tech": ["Python", "PyTorch", "Mosquitto", "Docker"],
-          "repo": "https://github.com/",
-          "link": "https://example.com/mqtt-guard",
-          "highlight": true
-        },
-        {
-          "name": "IoT Honeynet",
-          "description": "Düşük etkileşimli IoT honeypot ağı; saldırı imzalarını toplayıp tehdit istihbaratı feed'i üretir.",
-          "tech": ["Go", "Suricata", "ClickHouse", "Grafana"],
-          "repo": "https://github.com/"
-        },
-        {
-          "name": "SmartHome Pentest Toolkit",
-          "description": "Akıllı ev cihazlarına özel Zigbee/MQTT/BLE saldırı modülleri içeren penetrasyon testi araç seti.",
-          "tech": ["Python", "Scapy", "Bettercap", "GNU Radio"],
-          "repo": "https://github.com/"
-        },
-        {
-          "name": "TÜBİTAK 2237-A Eğitim Materyali",
-          "description": "IoTCyberSec etkinliği kapsamında hazırlanan uygulamalı laboratuvar dokümanları ve örnek veri setleri.",
-          "tech": ["Jupyter", "Mosquitto", "Wireshark"],
-          "link": "https://example.com/"
-        }
-      ],
-      "education": [
-        {
-          "degree": "Doktora, Bilgisayar Mühendisliği",
-          "school": "Orta Doğu Teknik Üniversitesi",
-          "year": "2018 — 2023",
-          "detail": "Tez: MQTT Tabanlı IoT Ağlarında Derin Öğrenme Destekli Saldırı Tespit Sistemleri"
-        },
-        {
-          "degree": "Yüksek Lisans, Bilgi Güvenliği Mühendisliği",
-          "school": "Gazi Üniversitesi",
-          "year": "2015 — 2017"
-        },
-        {
-          "degree": "Lisans, Bilgisayar Mühendisliği",
-          "school": "Hacettepe Üniversitesi",
-          "year": "2011 — 2015"
-        }
-      ],
-      "certifications": [
-        { "name": "OSCP — Offensive Security Certified Professional", "issuer": "Offensive Security", "year": "2022" },
-        { "name": "CEH — Certified Ethical Hacker", "issuer": "EC-Council", "year": "2020" },
-        { "name": "AWS Certified Security — Specialty", "issuer": "Amazon Web Services", "year": "2023" }
-      ]
-    },
-    {
       "slug": "rifat-ozturk",
       "name": "Rıfat Öztürk",
       "title": "Software Developer @ Sigorta Tahkim Komisyonu",
@@ -212,40 +91,155 @@
       ]
     },
     {
-      "slug": "mert-kaya",
-      "name": "Mert Kaya",
-      "title": "Senior Mobile Developer",
-      "field": "Mobil Geliştirme",
-      "fieldColor": "secondary",
-      "shortBio": "iOS ve Android tarafında 6+ yıllık deneyim. React Native ile cross-platform performans odaklı çözümler.",
-      "avatar": "MK",
-      "location": "İstanbul, TR",
-      "yearsOfExperience": 6,
-      "available": false
-    },
-    {
-      "slug": "burak-arslan",
-      "name": "Burak Arslan",
-      "title": "Backend Engineer",
-      "field": "Backend",
+      "slug": "yusuf-gulmez",
+      "name": "Yusuf Gülmez",
+      "title": "UI/UX Tasarımcı & Mobil Uygulama Geliştirici",
+      "field": "UI/UX & Mobil",
       "fieldColor": "tertiary",
-      "shortBio": "Yüksek trafikli, dağıtık sistemler ve event-driven mimari üzerine uzman. Go, Kafka, Kubernetes.",
-      "avatar": "BA",
-      "location": "İzmir, TR",
-      "yearsOfExperience": 8,
-      "available": false
-    },
-    {
-      "slug": "deniz-ozturk",
-      "name": "Deniz Öztürk",
-      "title": "Medikal IoT (MIoT) Araştırmacısı",
-      "field": "MIoT",
-      "fieldColor": "warning",
-      "shortBio": "Giyilebilir sağlık cihazları ve klinik IoT çözümleri üzerine çalışıyor. Sinyal işleme & gömülü sistemler.",
-      "avatar": "DÖ",
-      "location": "Ankara, TR",
-      "yearsOfExperience": 5,
-      "available": false
+      "shortBio": "React Native ile mobil uygulama geliştiren ve UI/UX tasarımı yapan tasarımcı-geliştirici. TÜBİTAK 2209-A destekli 'Green World' uygulamasının yaratıcısı.",
+      "avatar": "YG",
+      "avatarImage": "Profile1.png",
+      "location": "Sakarya, TR",
+      "yearsOfExperience": 3,
+      "available": true,
+      "social": {
+        "github": "https://github.com/yusufgulmezz",
+        "behance": "https://www.behance.net/designeverythink",
+        "medium": "https://yusufgulmezz.medium.com/"
+      },
+      "about": "Sakarya Üniversitesi Bilişim Sistemleri Mühendisliği bölümünden Temmuz 2025'te mezun oldum ve UI/UX tasarımı ile mobil uygulama geliştirmeye olan tutkumla teknoloji dünyasına adım attım.\n\nGeliştirdiğim en önemli projelerden biri, TÜBİTAK 2209-A programı kapsamında desteklenen ve çevre bilincini artırmayı amaçlayan 'Green World' mobil uygulamasıdır. Bu sosyal etki odaklı uygulamayı React Native, TypeScript, Firebase ve Figma gibi modern bir teknoloji yığını kullanarak hayata geçirdim.\n\nMobil geliştirmenin ötesinde, Dev Secure Bilişim Teknolojileri A.Ş.'deki stajımı başarıyla tamamladım; burada JavaScript, responsive tasarım, UI/UX ve yapay zeka prompt mühendisliği gibi alanlarda uygulamalı deneyim kazandım.\n\nÇözüm odaklı yaklaşımım yalnızca kod satırlarıyla sınırlı değil; yaratıcı yönümü de aktif olarak kullanıyorum. Behance portfolyomda sergilediğim Piksel Sanatı, Poster Tasarımı ve 3D Modelleme gibi çalışmalar, her projenin hem teknik hem görsel boyutlarıyla ilgilenmeye olan ilgimi yansıtıyor.\n\nŞu anda; sürekli öğrenme ve profesyonel gelişime odaklanarak bu eksiksiz beceri setimi yenilikçi projelere değer katmak için kullanabileceğim bir iş veya staj fırsatı arıyorum. Dinamik bir ekiple iş birliği yaparak teorik bilgilerimi pratik, gerçek dünya çözümlerine dönüştürmekten heyecan duyuyorum.",
+      "skills": [
+        {
+          "category": "Mobil Geliştirme",
+          "items": ["React Native", "Expo", "TypeScript", "Firebase"]
+        },
+        {
+          "category": "UI/UX & Tasarım",
+          "items": ["Figma", "UI/UX", "Tel Kafeslendirme (Wireframing)", "Motion", "Responsive Tasarım"]
+        },
+        {
+          "category": "Web & Programlama",
+          "items": ["JavaScript", "PHP", "HTML/CSS"]
+        },
+        {
+          "category": "Yaratıcı Çalışmalar",
+          "items": ["Photoshop", "Grafik Tasarımı", "Piksel Sanatı", "Poster Tasarımı", "3D Modelleme", "Oyun Geliştirme"]
+        },
+        {
+          "category": "3D & Görselleştirme",
+          "items": ["Unreal Engine", "Archviz", "UMG (Unreal Motion Graphics)"]
+        },
+        {
+          "category": "Diğer",
+          "items": ["Yapay Zeka Prompt Mühendisliği", "Yapay Zeka ile Fikir Oluşturma"]
+        }
+      ],
+      "experience": [
+        {
+          "title": "Mobil Uygulama Geliştirici",
+          "company": "Kendi İşim",
+          "period": "Kas 2025 — Günümüz",
+          "location": "Bağımsız",
+          "description": "React Native ve Expo ile kişisel mobil uygulama projeleri geliştiriyorum. Ana projem 'Triply' Play Store'a yayınlandı.",
+          "highlights": [
+            "Triply seyahat planlayıcı uygulaması (Play Store)",
+            "Mobil uygulama geliştirme + yapay zeka destekli fikir oluşturma"
+          ]
+        },
+        {
+          "title": "Unreal Engine Archviz Architectural Designer",
+          "company": "Serbest Çalışan",
+          "period": "Şub 2026 — Günümüz",
+          "location": "Uzaktan",
+          "description": "Bir mimari projede (Archviz) daire içi modellerin yerleştirilmesi, aydınlatma sistemi ve UI tasarımı üzerine çalıştım. Figma'da hazırladığım Archviz UI sistemini UMG'ye entegre ettim.",
+          "highlights": [
+            "İç mimari sahnenin modellenmesi ve aydınlatma kurgusu",
+            "Figma → UMG akışı ile Archviz UI sisteminin entegrasyonu"
+          ]
+        },
+        {
+          "title": "Yazılım Stajyeri",
+          "company": "DEV SECURE Bilişim Teknolojileri A.Ş.",
+          "period": "Tem 2024 — Ağu 2024",
+          "location": "Gebze, Kocaeli · Ofiste · Stajyer",
+          "description": "Şirketin mevcut projelerinde geliştirme görevleri üstlendim ve sürecimi dokümante ettim.",
+          "highlights": [
+            "JavaScript ve PHP ile web tabanlı geliştirme görevleri",
+            "Responsive tasarım, UI/UX ve AI prompt engineering konularında uygulamalı deneyim"
+          ]
+        },
+        {
+          "title": "Graphic Designer",
+          "company": "SAÜ Bilişim Sistemleri Topluluğu",
+          "period": "Mar 2022 — Şub 2024",
+          "location": "Sakarya · Serbest Çalışan",
+          "description": "Topluluğun etkinlik, sosyal medya ve tanıtım materyalleri için grafik tasarım üretimleri yaptım."
+        },
+        {
+          "title": "Game Designer",
+          "company": "Letragames",
+          "period": "Haz 2022 — 2023",
+          "location": "Serbest Çalışan",
+          "description": "Oyun tasarımı ve geliştirme süreçlerinde görev aldım."
+        }
+      ],
+      "projects": [
+        {
+          "name": "Green World — TÜBİTAK 2209-A",
+          "description": "Kullanıcıların çevredeki atıkları harita üzerinde işaretleyerek diğer kullanıcılarla paylaşmasına ve geri dönüşüm bilincini artırmasına olanak tanıyan mobil uygulama. Konum tabanlı bildirim sistemi, puanlama/ödüllendirme mekanizması ve çevresel veri analizleriyle desteklenmiştir. Sakarya Üniversitesi ile ilişkili olarak TÜBİTAK 2209-A programı kapsamında geliştirildi.",
+          "tech": ["React Native", "TypeScript", "Firebase", "Figma", "UI/UX"],
+          "repo": "https://github.com/Developrimbor/GreenWorld",
+          "highlight": true
+        },
+        {
+          "name": "Triply — Akıllı Seyahat Asistanı",
+          "description": "React Native ve Expo ile geliştirilmiş akıllı seyahat arkadaşı uygulaması. Kullanıcıların seyahatlerini organize etmesine, bütçelerini yönetmesine ve arkadaşlarıyla gerçek zamanlı işbirliği yapmasına olanak tanır. Play Store'da yayınlandı.",
+          "tech": ["React Native", "Expo", "TypeScript", "Mobil Uygulama Geliştirme"],
+          "link": "https://www.behance.net/gallery/241787815/Triply-Trip-Planner-App-Play-Store",
+          "highlight": true
+        },
+        {
+          "name": "DESIGN EVERY THINK — Kişisel Portfolyo",
+          "description": "Tasarımlarımı ve projelerimi bir araya getiren kişisel portfolyo web sitesi. UI/UX ve motion tasarım pratiklerini bütünleştiren bir vitrin.",
+          "tech": ["UI/UX", "Motion", "Web"],
+          "link": "https://www.behance.net/designeverythink"
+        },
+        {
+          "name": "Sakarya Üniversitesi BSM 2020-2025 Notları",
+          "description": "Sakarya Üniversitesi Bilgisayar ve Bilişim Bilimleri Fakültesi, Bilişim Sistemleri Mühendisliği bölümünde 2021-2025 yılları arasında alınan derslerin not, ödev ve sınav dokümanlarını içeren açık repo.",
+          "tech": ["GitHub", "Dokümantasyon"],
+          "repo": "https://github.com/yusufgulmezz"
+        }
+      ],
+      "education": [
+        {
+          "degree": "Yüksek Lisans (Master), Bilgisayar Mühendisliği",
+          "school": "Sakarya Üniversitesi",
+          "year": "Şub 2026 — Devam ediyor"
+        },
+        {
+          "degree": "Lisans, Bilişim Sistemleri Mühendisliği",
+          "school": "Sakarya Üniversitesi",
+          "year": "Ağu 2020 — Ağu 2025"
+        }
+      ],
+      "certifications": [
+        {
+          "name": "Build Wireframes and Low-Fidelity Prototypes",
+          "issuer": "Google (Coursera)",
+          "year": "Kas 2025"
+        },
+        {
+          "name": "Start the UX Design Process: Empathize, Define, and Ideate",
+          "issuer": "Google (Coursera)",
+          "year": "Kas 2025"
+        },
+        {
+          "name": "Foundations of User Experience (UX) Design",
+          "issuer": "Google (Coursera)",
+          "year": "Eki 2025"
+        }
+      ]
     }
   ]
 }

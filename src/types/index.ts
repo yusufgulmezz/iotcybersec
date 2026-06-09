@@ -92,6 +92,8 @@ export interface PortfolioSocial {
   linkedin?: string;
   twitter?: string;
   website?: string;
+  behance?: string;
+  medium?: string;
   email?: string;
 }
 

@@ -1,7 +1,8 @@
 import { Link, useParams } from 'react-router-dom';
 import {
     ArrowLeft, MapPin, Briefcase, Mail, Github, Linkedin, Twitter, Globe,
-    GraduationCap, Award, Code2, FolderGit2, Sparkles, ExternalLink, Hammer
+    GraduationCap, Award, Code2, FolderGit2, Sparkles, ExternalLink, Hammer,
+    Palette, BookOpen
 } from 'lucide-react';
 import { useData } from '../hooks/useData';
 import type { PortfolioData, PortfolioPerson } from '../types';
@@ -124,7 +125,14 @@ export default function PortfolioDetailPage() {
 
                 {person.about && (
                     <Section icon={<Sparkles size={20} />} title="Hakkında">
-                        <p className={styles.paragraph}>{person.about}</p>
+                        {person.about
+                            .split(/\n\s*\n/)
+                            .filter((p) => p.trim().length > 0)
+                            .map((para, i) => (
+                                <p key={i} className={styles.paragraph}>
+                                    {para}
+                                </p>
+                            ))}
                     </Section>
                 )}
 
@@ -287,6 +295,8 @@ function SocialLinks({ social }: { social: NonNullable<PortfolioPerson['social']
         { key: 'github', href: social.github, icon: <Github size={16} />, label: 'GitHub' },
         { key: 'linkedin', href: social.linkedin, icon: <Linkedin size={16} />, label: 'LinkedIn' },
         { key: 'twitter', href: social.twitter, icon: <Twitter size={16} />, label: 'Twitter' },
+        { key: 'behance', href: social.behance, icon: <Palette size={16} />, label: 'Behance' },
+        { key: 'medium', href: social.medium, icon: <BookOpen size={16} />, label: 'Medium' },
         { key: 'website', href: social.website, icon: <Globe size={16} />, label: 'Web sitesi' },
         {
             key: 'email',

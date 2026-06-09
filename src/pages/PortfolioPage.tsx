@@ -30,8 +30,8 @@ export default function PortfolioPage() {
                 <div className={styles.header}>
                     <h1 className="section-title">Portfolyo</h1>
                     <p className="section-subtitle">
-                        Mobil, backend, siber güvenlik ve medikal IoT (MIoT) alanlarında çalışan
-                        ekibimizin profillerini inceleyin.
+                        Yazılım geliştirme, UI/UX tasarımı ve mobil uygulama alanlarında çalışan
+                        ekip üyelerimizin profillerini inceleyin.
                     </p>
                 </div>
 
