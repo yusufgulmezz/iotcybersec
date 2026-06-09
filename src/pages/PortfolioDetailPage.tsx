@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import { useData } from '../hooks/useData';
 import type { PortfolioData, PortfolioPerson } from '../types';
+import { resolvePortfolioAsset } from '../utils/portfolioAssets';
 import styles from './PortfolioDetailPage.module.css';
 
 export default function PortfolioDetailPage() {
@@ -46,6 +47,7 @@ export default function PortfolioDetailPage() {
     }
 
     const isPlaceholder = !person.about;
+    const heroAvatarImg = resolvePortfolioAsset(person.avatarImage);
 
     return (
         <div className={styles.page}>
@@ -57,10 +59,18 @@ export default function PortfolioDetailPage() {
                 {/* Hero / Profil başlık */}
                 <section className={styles.hero}>
                     <div
-                        className={`${styles.avatar} ${styles[`avatar_${person.fieldColor}`]}`}
+                        className={`${styles.avatar} ${styles[`avatar_${person.fieldColor}`]} ${heroAvatarImg ? styles.avatarHasImage : ''}`}
                         aria-hidden="true"
                     >
-                        {person.avatar}
+                        {heroAvatarImg ? (
+                            <img
+                                src={heroAvatarImg}
+                                alt={person.name}
+                                className={styles.avatarImg}
+                            />
+                        ) : (
+                            person.avatar
+                        )}
                     </div>
                     <div className={styles.heroBody}>
                         <span

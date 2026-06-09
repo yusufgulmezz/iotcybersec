@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, MapPin, Briefcase, UserCircle2 } from 'lucide-react';
 import { useData } from '../hooks/useData';
 import type { PortfolioData } from '../types';
+import { resolvePortfolioAsset } from '../utils/portfolioAssets';
 import styles from './PortfolioPage.module.css';
 
 export default function PortfolioPage() {
@@ -42,12 +43,26 @@ export default function PortfolioPage() {
                             className={styles.card}
                         >
                             <div className={styles.cardTop}>
-                                <div
-                                    className={`${styles.avatar} ${styles[`avatar_${person.fieldColor}`]}`}
-                                    aria-hidden="true"
-                                >
-                                    {person.avatar}
-                                </div>
+                                {(() => {
+                                    const imgSrc = resolvePortfolioAsset(person.avatarImage);
+                                    return (
+                                        <div
+                                            className={`${styles.avatar} ${styles[`avatar_${person.fieldColor}`]} ${imgSrc ? styles.avatarHasImage : ''}`}
+                                            aria-hidden="true"
+                                        >
+                                            {imgSrc ? (
+                                                <img
+                                                    src={imgSrc}
+                                                    alt={person.name}
+                                                    className={styles.avatarImg}
+                                                    loading="lazy"
+                                                />
+                                            ) : (
+                                                person.avatar
+                                            )}
+                                        </div>
+                                    );
+                                })()}
                                 <span
                                     className={`${styles.fieldBadge} ${styles[`field_${person.fieldColor}`]}`}
                                 >

@@ -122,6 +122,96 @@
       ]
     },
     {
+      "slug": "rifat-ozturk",
+      "name": "Rıfat Öztürk",
+      "title": "Software Developer @ Sigorta Tahkim Komisyonu",
+      "field": "Yazılım Geliştirme",
+      "fieldColor": "secondary",
+      "shortBio": "Node.js tabanlı backend servisleri ve REST API entegrasyonları geliştiren, React/TypeScript ile dinamik yönetim arayüzleri tasarlayan yazılım geliştirici.",
+      "avatar": "RÖ",
+      "avatarImage": "77500856.jfif",
+      "location": "İstanbul, TR",
+      "yearsOfExperience": 2,
+      "available": true,
+      "about": "Sakarya Üniversitesi Bilişim Sistemleri Mühendisliği mezunuyum; aynı üniversitede Bilgisayar Mühendisliği alanında yüksek lisansıma devam ediyorum. Profesyonel hayatıma TİSAŞ'ta üretim/kalite ve iOS geliştirme stajlarıyla başladım. Sakarya Teknokent'te React ve TypeScript ile G-Mentor mentor-mentee takip platformunu geliştirdim. Şu an Sigorta Tahkim Komisyonu'nda Node.js tabanlı backend servisleri ve REST API entegrasyonları üzerinde çalışıyor; performans ve güvenilirlik odaklı çözümler üretiyorum.",
+      "skills": [
+        {
+          "category": "Backend & API",
+          "items": ["Node.js", "REST API", "Web Services", "Stream tabanlı XML işleme", "DB Caching"]
+        },
+        {
+          "category": "Frontend",
+          "items": ["React", "TypeScript", "JavaScript", "HTML/CSS"]
+        },
+        {
+          "category": "Mimari & Patternler",
+          "items": ["MVC", "Rol Bazlı Erişim Kontrolü (RBAC)", "Dinamik Yönetim Arayüzleri"]
+        },
+        {
+          "category": "Mobil",
+          "items": ["iOS Geliştirme"]
+        }
+      ],
+      "experience": [
+        {
+          "title": "Software Developer",
+          "company": "Sigorta Tahkim Komisyonu",
+          "period": "Eyl 2025 — Günümüz",
+          "location": "Üsküdar, İstanbul · Ofiste · Tam zamanlı",
+          "description": "Node.js tabanlı backend servisleri ve REST API entegrasyonları geliştiriyorum.",
+          "highlights": [
+            "Canlı ortamda 7.5 GB'a ulaşan bellek sızıntısı tespit edildi",
+            "DB caching ve stream tabanlı XML işleme ile performans iyileştirmeleri yapıldı"
+          ]
+        },
+        {
+          "title": "Software Developer",
+          "company": "Sakarya Teknokent",
+          "period": "Mar 2025 — Haz 2025",
+          "location": "Sakarya · Ofiste · Yarı zamanlı",
+          "description": "React ve TypeScript ile mentor-mentee takip platformu G-Mentor'u geliştirdim.",
+          "highlights": [
+            "MVC mimarisine uygun, rol bazlı erişim kontrolü içeren dinamik yönetim arayüzleri tasarlandı",
+            "Mentor ve mentee'lerin etkileşimini dijital ortamda yöneten uçtan uca bir akış kuruldu"
+          ]
+        },
+        {
+          "title": "iOS Developer Intern",
+          "company": "TİSAŞ Trabzon Silah Sanayi A.Ş.",
+          "period": "Tem 2024 — Eyl 2024",
+          "location": "Trabzon · Ofiste · Stajyer",
+          "description": "iOS uygulama geliştirme süreçlerinde stajyer olarak görev aldım."
+        },
+        {
+          "title": "Production & Quality Management Intern",
+          "company": "TİSAŞ Trabzon Silah Sanayi A.Ş.",
+          "period": "Haz 2024 — Tem 2024",
+          "location": "Trabzon · Ofiste · Stajyer",
+          "description": "Ateşli silah üretim hattında üretim ve kalite yönetimi süreçlerini gözlemleyip raporladım."
+        }
+      ],
+      "projects": [
+        {
+          "name": "G-Mentor — Mentor-Mentee Takip ve Yönetim Sistemi",
+          "description": "Mentor ve mentee'ler arasındaki etkileşimi kolaylaştırmak amacıyla geliştirilen web uygulaması. Mentorlar, mentee'lerin faaliyetlerini takip edebiliyor, toplantılar planlayabiliyor ve notlar bırakabiliyor; mentee'ler de kendi girişimlerini sisteme tanıtıp süreci yönetebiliyor. Sakarya Teknokent ile ilişkili olarak geliştirildi (Mar 2025 – Ağu 2025).",
+          "tech": ["TypeScript (TSX)", "React", "JavaScript", "HTML/CSS", "JSON"],
+          "highlight": true
+        }
+      ],
+      "education": [
+        {
+          "degree": "Yüksek Lisans, Bilgisayar Mühendisliği",
+          "school": "Sakarya Üniversitesi",
+          "year": "2026 — Devam ediyor"
+        },
+        {
+          "degree": "Lisans, Bilişim Sistemleri Mühendisliği",
+          "school": "Sakarya Üniversitesi",
+          "year": "2020 — Tem 2025"
+        }
+      ]
+    },
+    {
       "slug": "mert-kaya",
       "name": "Mert Kaya",
       "title": "Senior Mobile Developer",

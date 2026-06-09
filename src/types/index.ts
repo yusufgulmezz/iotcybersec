@@ -139,6 +139,7 @@ export interface PortfolioPerson {
   fieldColor: PortfolioFieldColor;
   shortBio: string;
   avatar: string;
+  avatarImage?: string;
   location?: string;
   yearsOfExperience?: number;
   available?: boolean;
