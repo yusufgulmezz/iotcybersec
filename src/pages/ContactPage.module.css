@@ -98,7 +98,7 @@
 .formGroup input,
 .formGroup textarea {
     padding: 12px 16px;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--input-bg);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
     color: var(--text-primary);
@@ -126,7 +126,7 @@
 .sendButton {
     padding: 14px 32px;
     background: var(--accent-gradient);
-    color: #0a0e17;
+    color: var(--btn-on-accent);
     border: none;
     border-radius: var(--radius-md);
     font-family: var(--font-primary);

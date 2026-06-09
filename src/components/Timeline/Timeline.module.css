@@ -36,7 +36,7 @@
 
 .dayTab.active {
     background: var(--accent-gradient);
-    color: #0a0e17;
+    color: var(--btn-on-accent);
     border-color: transparent;
     box-shadow: 0 4px 15px rgba(0, 212, 170, 0.25);
 }

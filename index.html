@@ -20,6 +20,23 @@
         }
       })();
     </script>
+    <script>
+      // Tema FOUC (flash of unstyled content) önleyici:
+      // Sayfa boyanmadan önce <html data-theme="..."> ataması yap.
+      (function () {
+        try {
+          var stored = localStorage.getItem('iotcybersec:theme');
+          if (stored !== 'light' && stored !== 'dark') {
+            stored = window.matchMedia &&
+              window.matchMedia('(prefers-color-scheme: light)').matches
+              ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', stored);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

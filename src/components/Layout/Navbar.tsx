@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Shield, Menu, X } from 'lucide-react';
 import styles from './Navbar.module.css';
+import ThemeToggle from './ThemeToggle';
 
 const navItems = [
     { path: '/', label: 'Ana Sayfa' },
@@ -56,9 +57,12 @@ export default function Navbar() {
                         ))}
                     </ul>
 
-                    <Link to="/basvuru" className={styles.ctaButton}>
-                        Hemen Başvur
-                    </Link>
+                    <div className={styles.navActions}>
+                        <ThemeToggle />
+                        <Link to="/basvuru" className={styles.ctaButton}>
+                            Hemen Başvur
+                        </Link>
+                    </div>
 
                     <button
                         className={styles.mobileMenuButton}
@@ -83,9 +87,12 @@ export default function Navbar() {
                         </li>
                     ))}
                 </ul>
-                <Link to="/basvuru" className={`${styles.ctaButton} ${styles.mobileCta}`}>
-                    Hemen Başvur
-                </Link>
+                <div className={styles.mobileFooter}>
+                    <ThemeToggle variant="full" />
+                    <Link to="/basvuru" className={`${styles.ctaButton} ${styles.mobileCta}`}>
+                        Hemen Başvur
+                    </Link>
+                </div>
             </div>
         </>
     );

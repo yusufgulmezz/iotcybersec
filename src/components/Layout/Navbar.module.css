@@ -9,7 +9,7 @@
 }
 
 .navbar.scrolled {
-    background: rgba(10, 14, 23, 0.9);
+    background: var(--nav-bg-scrolled);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
@@ -43,7 +43,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #0a0e17;
+    color: var(--btn-on-accent);
 }
 
 .logoAccent {
@@ -95,6 +95,12 @@
     font-size: 0.875rem;
 }
 
+.navActions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 .mobileMenuButton {
     display: none;
     background: none;
@@ -104,13 +110,22 @@
     padding: 8px;
 }
 
+.mobileFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 12px;
+}
+
 .mobileMenu {
     display: none;
     position: fixed;
     top: 72px;
     left: 0;
     right: 0;
-    background: rgba(10, 14, 23, 0.98);
+    background: var(--nav-bg-mobile);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
     padding: 16px 24px;
@@ -145,7 +160,6 @@
 }
 
 .mobileCta {
-    margin-top: 12px;
     width: 100%;
     text-align: center;
     justify-content: center;
@@ -156,7 +170,7 @@
         display: none;
     }
 
-    .ctaButton {
+    .navActions {
         display: none;
     }
 
