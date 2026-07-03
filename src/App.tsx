@@ -7,6 +7,7 @@ import AboutPage from './pages/AboutPage';
 import ProgramPage from './pages/ProgramPage';
 import ApplicationPage from './pages/ApplicationPage';
 import ContactPage from './pages/ContactPage';
+import ProjectsPage from './pages/ProjectsPage';
 import PortfolioPage from './pages/PortfolioPage';
 import PortfolioDetailPage from './pages/PortfolioDetailPage';
 
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/hakkinda" element={<AboutPage />} />
         <Route path="/program" element={<ProgramPage />} />
+        <Route path="/projeler" element={<ProjectsPage />} />
         <Route path="/portfolyo" element={<PortfolioPage />} />
         <Route path="/portfolyo/:slug" element={<PortfolioDetailPage />} />
         <Route path="/basvuru" element={<ApplicationPage />} />

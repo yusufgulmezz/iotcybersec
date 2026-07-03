@@ -8,6 +8,7 @@ const navItems = [
     { path: '/', label: 'Ana Sayfa' },
     { path: '/hakkinda', label: 'Hakkında' },
     { path: '/program', label: 'Program' },
+    { path: '/projeler', label: 'Projeler' },
     { path: '/portfolyo', label: 'Portfolyo' },
     { path: '/basvuru', label: 'Başvuru' },
     { path: '/iletisim', label: 'İletişim' },

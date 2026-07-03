@@ -1,0 +1,343 @@
+{
+  "categories": [
+    { "id": "web", "label": "Web" },
+    { "id": "mobile", "label": "Mobil" },
+    { "id": "fullstack", "label": "Full-Stack" }
+  ],
+  "projects": [
+    {
+      "id": "our-community",
+      "title": "Our Community — Gönüllülük Bilinçlendirme Platformu",
+      "category": "web",
+      "authors": [
+        { "name": "Hamza Alhadeethi", "avatar": "HA", "avatarImage": "hamza-profile.png", "role": "Geliştirici" },
+        { "name": "Ziyad", "avatar": "Z", "role": "Geliştirici" }
+      ],
+      "description": "Gençleri toplumsal gönüllülük faaliyetlerine yönlendirmeyi amaçlayan, duyarlı (responsive) bir web sitesi.",
+      "features": [
+        "Mobil ve masaüstü uyumlu responsive tasarım",
+        "Çok sayfalı yapı (Ana Sayfa, Hakkımızda, Haberler, Proje Galerisi, İletişim)",
+        "Sezgisel navigasyon menüsü",
+        "GitHub Pages üzerinden yayınlandı"
+      ],
+      "tech": ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+      "liveUrl": "https://hamzaalhadithy.github.io/",
+      "images": ["our-community-hero.png"],
+      "galleryStyle": "wide"
+    },
+    {
+      "id": "cs50-portfolio",
+      "title": "Kişisel Portfolyo Web Sitesi",
+      "category": "fullstack",
+      "authors": [
+        { "name": "Hamza Alhadeethi", "avatar": "HA", "avatarImage": "hamza-profile.png", "role": "Full-Stack Geliştirici" }
+      ],
+      "description": "Flask ile geliştirilmiş, tam yığın (full-stack) bir kişisel portfolyo web sitesi. Admin panelli dinamik bir blog sistemi ve proje sergileme alanı içerir.",
+      "features": [
+        "Animasyonlu tanıtım bölümü ve beceri gösterge çubuklarına sahip ana sayfa",
+        "Canlı arama özellikli blog sistemi — yönetici girişiyle ekleme/düzenleme/silme (CRUD) işlemleri",
+        "GitHub bağlantılı, görsel destekli proje kartları",
+        "Flask-Mail entegrasyonlu iletişim formu",
+        "Güvenli admin paneli ile içerik yönetimi"
+      ],
+      "tech": [
+        "Flask (Python)",
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "SQLite",
+        "Bootstrap 5",
+        "Flask-Mail",
+        "Flask-Session"
+      ],
+      "liveUrl": "https://cs50-portfolio-jgya.onrender.com/",
+      "githubUrl": "https://github.com/Hamzaalhadithy/CS50-Portfolio",
+      "images": ["hamza-portfolio-hero.png"],
+      "galleryStyle": "wide"
+    },
+    {
+      "id": "flutter-news-app",
+      "title": "Flutter Haber Uygulaması",
+      "category": "mobile",
+      "authors": [
+        { "name": "Hamza Alhadeethi", "avatar": "HA", "avatarImage": "hamza-profile.png", "role": "Mobil Geliştirici" }
+      ],
+      "description": "NewsAPI.org üzerinden iş dünyası, spor ve bilim kategorilerinde güncel haberleri sunan, BLoC mimarisiyle geliştirilmiş mobil uygulama.",
+      "features": [
+        "Kategori bazlı, önbelleğe alınmış haber akışı",
+        "Anlık anahtar kelime araması",
+        "BLoC ile yönetilen durum bazlı navigasyon ve hata yönetimi",
+        "Uygulama içi WebView ile makale okuma deneyimi",
+        "Kalıcı açık/koyu tema desteği (SharedPreferences ile saklanır)"
+      ],
+      "tech": [
+        "Flutter",
+        "Dart",
+        "BLoC (flutter_bloc)",
+        "Dio",
+        "SharedPreferences",
+        "WebView"
+      ],
+      "images": [
+        "flutter-news-home.png",
+        "flutter-news-article.png",
+        "flutter-news-search.png",
+        "flutter-news-settings.png"
+      ]
+    },
+    {
+      "id": "asya-tech-admin",
+      "title": "Asya Tech — Yönetici Yönetim Paneli",
+      "category": "fullstack",
+      "authors": [
+        {
+          "name": "Hamza Alhadeethi",
+          "avatar": "HA",
+          "avatarImage": "hamza-profile.png",
+          "role": "Yazılım Mühendisliği Stajyeri"
+        }
+      ],
+      "description": "İstanbul merkezli Asya Tech şirketinde Yazılım Mühendisliği Stajyeri olarak (Mart 2026) geliştirdiğim, StudentEdu platformu için gerçek zamanlı bir admin paneli. Öğrenci verileri ve platform metrikleri tek bir merkezden izlenir; idari güncellemeler sayfa yenilemesi olmadan anında platforma yansır.",
+      "features": [
+        "Öğrenci verilerini ve platform metriklerini gerçek zamanlı izlemeye olanak tanıyan merkezi admin paneli",
+        "Firebase üzerinde sunucusuz (serverless) backend mimarisi — Cloud Firestore ile NoSQL veri yönetimi, Firebase Authentication ile güvenli kullanıcı erişimi",
+        "Sayfa yenilemesi gerektirmeden anlık veri senkronizasyonu ile idari güncellemelerin platforma anında yansıtılması",
+        "Tekrarlayan idari işlemleri otomatikleştiren bulut tabanlı iş mantığı; operasyon ekibi için manuel veri girişini önemli ölçüde azalttı"
+      ],
+      "tech": [
+        "JavaScript",
+        "Firebase",
+        "Cloud Firestore",
+        "Firebase Authentication"
+      ],
+      "liveUrl": "https://www.linkedin.com/company/asya-tech/posts/?feedView=all",
+      "images": ["asya-tech-logo.png"]
+    },
+    {
+      "id": "g-mentor",
+      "title": "G-Mentor — Mentor-Mentee Takip ve Yönetim Sistemi",
+      "category": "web",
+      "authors": [
+        {
+          "name": "Rıfat Öztürk",
+          "avatar": "RÖ",
+          "avatarImage": "77500856.jfif",
+          "role": "Yazılım Geliştirici"
+        }
+      ],
+      "description": "Mentor ve mentee'ler arasındaki etkileşimi kolaylaştırmak için geliştirilen bir web uygulamasıdır. Mentorlar, mentee'lerin faaliyetlerini takip edebilir, toplantılar planlayabilir ve notlar bırakabilir; mentee'ler de kendi girişimlerini sisteme tanıtabilir ve süreci yönetebilir. Bu projede mentor-mentee ilişkilerinin dijital ortamda verimli yürütülmesi için kullanıcı dostu, dinamik ve yönetilebilir arayüzler geliştirdim. Sakarya Teknokent ile ilişkili olarak geliştirilmiştir.",
+      "features": [
+        "Program yönetimi: amaç, çıktılar ve katılımcı listesiyle merkezi program takibi",
+        "Mentee dashboard: toplantılar, ilerleme ve mentor bilgilerine tek ekrandan erişim",
+        "Toplantı planlama, talep yönetimi ve mentor notları",
+        "Mentor atama, mentee ekleme ve rol bazlı yönetim akışları",
+        "MVC mimarisine uygun, dinamik ve yönetilebilir arayüz bileşenleri",
+        "Sakarya Teknokent · mentor-mentee etkileşim platformu"
+      ],
+      "tech": [
+        "TypeScript (TSX)",
+        "React",
+        "JavaScript",
+        "HTML/CSS",
+        "JSON"
+      ],
+      "images": [
+        "g-mentor-program.png",
+        "g-mentor-mentee-dashboard.png"
+      ],
+      "galleryStyle": "wide"
+    },
+    {
+      "id": "triply",
+      "title": "Triply — Akıllı Seyahat Asistanı",
+      "category": "mobile",
+      "authors": [
+        {
+          "name": "Yusuf Gülmez",
+          "avatar": "YG",
+          "avatarImage": "Profile1.png",
+          "role": "UI/UX Tasarımcı & Mobil Geliştirici"
+        }
+      ],
+      "description": "Kullanıcıların seyahat rotalarını oluşturup harcamalarını yönetebilecekleri ve anılarını paylaşabilecekleri, React Native ile geliştirilen cross-platform bir mobil uygulamadır. React Native ve Expo ile hayata geçirilen Triply; seyahat planlama, bütçe takibi ve arkadaşlarla gerçek zamanlı işbirliğini tek bir deneyimde birleştirir. Geliştirme sürecinde kullanıcı deneyimi her aşamada ön planda tutulmuştur.",
+      "features": [
+        "Seyahat rotası oluşturma ve günlük aktivite planlama",
+        "Grup harcamalarını yönetme, bölüştürme ve takip etme",
+        "Arkadaşlarla gerçek zamanlı işbirliği ve anı paylaşımı",
+        "Harita üzerinde rota ve durak görselleştirmesi",
+        "Play Store'da 2.000+ indirme",
+        "Kullanıcı deneyimi odaklı arayüz ve akış tasarımı"
+      ],
+      "tech": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Mobil Uygulama Geliştirme",
+        "UI/UX"
+      ],
+      "liveUrl": "https://www.behance.net/gallery/241787815/Triply-Trip-Planner-App-Play-Store",
+      "images": ["triply-splash.png"],
+      "galleryStyle": "wide"
+    },
+    {
+      "id": "green-world",
+      "title": "Green World — TÜBİTAK 2209-A",
+      "category": "mobile",
+      "authors": [
+        {
+          "name": "Yusuf Gülmez",
+          "avatar": "YG",
+          "avatarImage": "Profile1.png",
+          "role": "UI/UX Tasarımcı & Mobil Geliştirici"
+        }
+      ],
+      "description": "Kullanıcıların çevrede gördükleri atık ve çöp yığınlarını harita üzerinde işaretleyerek diğer kullanıcılarla paylaşmasına ve geri dönüşüm bilincini artırmasına olanak tanıyan bir çevre farkındalık uygulamasıdır. React Native ile geliştirilmiş olup Firebase altyapısıyla desteklenmektedir; tasarım süreci Figma ile yürütülmüştür. Sakarya Üniversitesi ile ilişkili olarak TÜBİTAK 2209-A programı kapsamında, lisans bitirme projesi olarak hayata geçirilmiştir.",
+      "features": [
+        "Harita üzerinde atık ve çöp noktalarını işaretleme ve toplulukla paylaşma",
+        "Konum tabanlı bildirim sistemi",
+        "Puanlama ve ödüllendirme mekanizması ile kullanıcı motivasyonu",
+        "Çevresel veri analizleriyle farkındalık desteği",
+        "Bireylerin çevre kirliliğiyle mücadelede aktif rol almasını teşvik eden sosyal etki odaklı yapı",
+        "Sakarya Üniversitesi · TÜBİTAK 2209-A kapsamında lisans bitirme projesi"
+      ],
+      "tech": [
+        "React Native",
+        "TypeScript",
+        "Firebase",
+        "Figma",
+        "UI/UX"
+      ],
+      "liveUrl": "https://www.behance.net/gallery/229631387/Green-World-Mobile-App-UI",
+      "images": [
+        "green-world-01-screens.png",
+        "green-world-02-typography.png",
+        "green-world-03-components.png",
+        "green-world-04-wireframe.png"
+      ],
+      "galleryStyle": "wide"
+    },
+    {
+      "id": "design-every-think",
+      "title": "DesignEveryThink — Kişisel Portfolyo",
+      "category": "web",
+      "authors": [
+        {
+          "name": "Yusuf Gülmez",
+          "avatar": "YG",
+          "avatarImage": "Profile1.png",
+          "role": "UI/UX Tasarımcı & Mobil Geliştirici"
+        }
+      ],
+      "description": "Tasarım ve yazılım alanında yapmış olduğum birçok projeyi tek bir sitede toplamak için geliştirdiğim kişisel portfolyo sitem. Geliştirirken farklı sitelerden ilham alıp beğendiklerimi entegre etmeye çalıştım. UI/UX ve kodlama becerilerimi tek, tutarlı bir deneyimde bir araya getirir; poster tasarımı, pixel art, 3D çalışmalar ve yazılım projelerini birlikte sergiler.",
+      "features": [
+        "UI/UX ve kodlama projelerini tek platformda birleştiren kişisel vitrin",
+        "Responsive tasarım anlayışıyla tüm cihazlara uyumlu deneyim",
+        "Farklı kaynaklardan ilham alınarak şekillendirilmiş özgün arayüz ve etkileşimler",
+        "Araştırma, yapı, tasarım ve geliştirme aşamalarını kapsayan belgelenmiş tasarım süreci",
+        "Poster, pixel art, 3D modelleme ve kodlama çalışmalarının kategorize edilmiş sunumu",
+        "Sayfa geçişleri, scroll animasyonları ve ses aç/kapa gibi etkileşimli detaylar"
+      ],
+      "tech": [
+        "React",
+        "TypeScript",
+        "Next.js",
+        "Framer Motion",
+        "Tailwind CSS",
+        "UI/UX"
+      ],
+      "liveUrl": "https://yusufgulmezz.github.io/portfolio/",
+      "images": [
+        "det-portfolio-01-cover.png",
+        "det-portfolio-02-about.png",
+        "det-portfolio-03-design-process.png",
+        "det-portfolio-04-color.png",
+        "det-portfolio-05-typography.png"
+      ],
+      "galleryStyle": "wide"
+    },
+    {
+      "id": "primeware",
+      "title": "Primeware — Kurumsal Web Sitesi",
+      "category": "web",
+      "authors": [
+        { "name": "Moataz", "avatar": "M", "role": "Geliştirici" }
+      ],
+      "description": "Primeware Yazılım için geliştirilen çok dilli kurumsal web sitesi. 2019'dan bu yana yazılım geliştirme, web tasarımı ve mühendislik çözümleri sunan şirketin HVAC odaklı ürün portföyünü (klima santrali seçim programı, fancoil, ısı geri kazanım, servis takip ve CRM çözümleri) tanıtır; ziyaretçiler demo talep edebilir ve referanslara göz atabilir.",
+      "features": [
+        "Çok dilli yapı: Türkçe, İngilizce ve Rusça (next-intl)",
+        "Yazılım geliştirme, web tasarımı ve mühendislik çözümleri hizmet vitrinleri",
+        "HVAC yazılım ürünleri tanıtımı ve ürün detay sayfaları",
+        "Demo talep formu; Resend ve React Email ile e-posta bildirimleri",
+        "Referanslar, iletişim ve sosyal medya bağlantıları",
+        "Responsive navigasyon ve yüzen demo CTA butonu"
+      ],
+      "tech": [
+        "Next.js",
+        "next-intl",
+        "Tailwind CSS",
+        "DaisyUI",
+        "Swiper",
+        "Resend",
+        "React Email"
+      ],
+      "liveUrl": "https://primeware-site-abqs.vercel.app",
+      "images": ["primeware-hero.png"],
+      "galleryStyle": "wide"
+    },
+    {
+      "id": "ocak-otomotiv",
+      "title": "Ocak Otomotiv — Kurumsal Web Sitesi",
+      "category": "web",
+      "authors": [
+        { "name": "Moataz", "avatar": "M", "role": "Geliştirici" }
+      ],
+      "description": "İstanbul İkitelli'de faaliyet gösteren Ocak Otomotiv için geliştirilen çok dilli kurumsal vitrin sitesi. Otomotiv hortum ve fitil ürünlerini (lastik şişirme hortumları, süngerli fitiller, kapı-bagaj fitilleri, akaryakıt hortumları) tanıtır; ziyaretçiler teklif alabilir, ürün detaylarına ulaşabilir ve iletişim formu üzerinden şirketle doğrudan iletişime geçebilir.",
+      "features": [
+        "Üç dil desteği: Türkçe, İngilizce ve Arapça; Arapça için RTL düzeni",
+        "Açık/koyu tema geçişi",
+        "Ürün kataloğu kartları ve hero alanında ürün görseli kaydırıcısı (Swiper)",
+        "Teklif alma ve iletişim sayfası; form gönderimleri Resend + React Email ile",
+        "Google Haritalar entegrasyonu ve iletişim bilgileri (telefon, e-posta, adres)",
+        "DaisyUI bileşenleriyle responsive kurumsal arayüz"
+      ],
+      "tech": [
+        "Next.js",
+        "next-intl",
+        "Tailwind CSS",
+        "DaisyUI",
+        "Swiper",
+        "Resend",
+        "React Email"
+      ],
+      "liveUrl": "https://ocak-automative-site.vercel.app",
+      "images": ["ocak-otomotiv-hero.png"],
+      "galleryStyle": "wide"
+    },
+    {
+      "id": "corporate-intranet",
+      "title": "Kurumsal İntranet — İç İletişim ve İK Dijitalleştirme Platformu",
+      "category": "fullstack",
+      "authors": [
+        { "name": "Diğer", "avatar": "D", "role": "Full-Stack Geliştirici" }
+      ],
+      "description": "Büyük ölçekli bir kurumun iç iletişimini güçlendirmek, operasyonel verimliliği artırmak ve insan kaynakları süreçlerini tamamen dijitalleştirmek amacıyla uçtan uca modern bir kurumsal intranet platformu tasarlanıp geliştirilmiştir. Karmaşık veri akışları ve manuel yürütülen idari süreçler merkezi, güvenli ve kullanıcı dostu bir web uygulamasına taşınmıştır.",
+      "features": [
+        "Gelişmiş dijital izin yönetimi: hiyerarşik onay akışları ve 3. parti personel takip yazılımlarıyla çift yönlü anlık senkronizasyon",
+        "Enterprise Analytics sunucularından gelen verilerin işlendiği gerçek zamanlı operasyonel raporlama dashboard'u",
+        "Yetki bazlı anlık duyuru sistemi ve departmanlar arası güvenli doküman paylaşım altyapısı",
+        "Tüm çalışanların kurumsal verilerine ve iletişim bilgilerine hızlı erişim sağlayan personel dizin modülü",
+        "Frontend–backend DTO eşleşmesiyle entegrasyonlarda senkronizasyon hatalarının minimize edilmesi"
+      ],
+      "tech": [
+        "React",
+        ".NET Web API (C#)",
+        "Code-First & Database Migrations",
+        "RESTful API",
+        "3. Parti Kurumsal Yazılım Entegrasyonları",
+        "Enterprise Analytics Server Entegrasyonları"
+      ],
+      "images": ["corporate-intranet-dashboard.png"],
+      "galleryStyle": "wide"
+    }
+  ]
+}

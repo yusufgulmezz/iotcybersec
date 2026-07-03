@@ -158,6 +158,41 @@ export interface PortfolioData {
   people: PortfolioPerson[];
 }
 
+// Projeler (detaylı vitrin)
+export type ProjectCategoryId = 'web' | 'mobile' | 'fullstack';
+
+export interface ProjectCategory {
+  id: ProjectCategoryId;
+  label: string;
+}
+
+export interface ProjectAuthor {
+  name: string;
+  avatar: string;
+  avatarImage?: string;
+  role?: string;
+}
+
+export interface ShowcaseProject {
+  id: string;
+  title: string;
+  category: ProjectCategoryId;
+  authors: ProjectAuthor[];
+  description: string;
+  features: string[];
+  tech: string[];
+  liveUrl?: string;
+  githubUrl?: string;
+  images?: string[];
+  /** Galeri düzeni: mobil ekran görüntüleri veya geniş web ekranları */
+  galleryStyle?: 'mobile' | 'wide';
+}
+
+export interface ProjectsData {
+  categories: ProjectCategory[];
+  projects: ShowcaseProject[];
+}
+
 // Başvuru Formu
 export interface ApplicationFormData {
   firstName: string;
