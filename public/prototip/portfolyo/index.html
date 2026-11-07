@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>CyberSense Portfolyo Prototipi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0a1628;--surface:#0f2040;--surface-2:#132a4f;--line:rgba(255,255,255,.09);--row-hover:rgba(0,200,232,.06);
+    --text:#e8eef6;--muted:rgba(232,238,246,.55);--accent:#00c8e8;--pill:rgba(255,255,255,.14);--ease:cubic-bezier(.22,1,.36,1);
+    --display:"Bricolage Grotesque",Inter,system-ui,sans-serif;color-scheme:dark}
+  .no-annot .annot{display:none}
+  .annot-toggle{position:fixed;right:calc(20px + env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:90;font:500 13px Inter,system-ui,sans-serif;background:#132a4f;color:#e8eef6;border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:9px 16px;cursor:pointer}
+  .annot-toggle:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid #00c8e8;outline-offset:3px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font:15px/1.5 Inter,system-ui,sans-serif;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  .sec{padding:110px 0;position:relative}
+  .kicker{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:14px;margin-bottom:18px}
+  .kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  h2{font-family:var(--display);font-weight:700;font-size:clamp(30px,4.4vw,52px);line-height:1.02;letter-spacing:-.03em}
+  h2 em,h1 em{font-style:normal;color:var(--accent)}
+  .btn{display:inline-flex;align-items:center;gap:8px;border-radius:99px;padding:13px 22px;font-weight:600;transition:transform .35s var(--ease),background .35s var(--ease)}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--accent);color:#0a1628}
+  .btn-ghost{border:1px solid var(--pill)}
+  .annot{position:absolute;right:24px;top:24px;font-size:11px;color:var(--accent);border:1px dashed rgba(0,200,232,.45);border-radius:8px;padding:4px 8px;background:rgba(10,22,40,.85);z-index:3}
+
+  /* Header (site's existing navy header, simplified) */
+  header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(10,22,40,.8);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;height:64px;font-size:14px}
+  header nav{display:flex;gap:24px;color:var(--muted)}
+  header nav .on{color:var(--text)}
+  header .logo{font-weight:700;letter-spacing:-.01em}
+  header .logo i{font-style:normal;color:var(--accent)}
+
+  /* Hero */
+  .hero{min-height:88vh;display:flex;align-items:center;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .gridbg{position:absolute;inset:-1px;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(70% 60% at 50% 40%,#000 30%,transparent 80%)}
+  .hero .glow{position:absolute;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(0,200,232,.22),transparent 65%);left:0;top:0;pointer-events:none;transform:translate(-50%,-50%);filter:blur(10px)}
+  .hero .wrap{position:relative;text-align:center}
+  h1{font-family:var(--display);font-weight:700;font-size:clamp(44px,8.2vw,108px);line-height:.95;letter-spacing:-.045em;margin:6px 0 26px}
+  h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
+  h1 .w>span{display:inline-block;transform:translateY(105%);transition:transform 1s var(--ease)}
+  .loaded h1 .w>span{transform:none}
+  .hero p.lede{max-width:600px;margin:0 auto 34px;color:var(--muted);font-size:17px;opacity:0;transform:translateY(12px);transition:1s var(--ease) .5s}
+  .hero .actions{display:flex;gap:12px;justify-content:center;opacity:0;transform:translateY(12px);transition:1s var(--ease) .65s}
+  .loaded .hero p.lede,.loaded .hero .actions{opacity:1;transform:none}
+  .marquee{position:absolute;left:0;right:0;bottom:0;border-top:1px solid var(--line);overflow:hidden;padding:16px 0;color:var(--muted);font-size:14px;white-space:nowrap}
+  .marquee .track{display:inline-flex;gap:44px;animation:mq 38s linear infinite;padding-left:44px}
+  .marquee span::before{content:"✦";color:var(--accent);margin-right:44px;font-size:10px}
+  @keyframes mq{to{transform:translateX(-50%)}}
+
+  /* Works list */
+  .head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+  .head p{max-width:380px;color:var(--muted)}
+  .list{border:1px solid var(--line);border-radius:22px;background:var(--surface);overflow:hidden}
+  .row{display:grid;grid-template-columns:220px 1fr auto;gap:32px;align-items:center;padding:30px 32px;border-top:1px solid var(--line);cursor:pointer;position:relative}
+  .row:first-child{border-top:0}
+  .row::after{content:"";position:absolute;inset:0;background:var(--row-hover);opacity:0;transition:opacity .35s var(--ease)}
+  .row:hover::after{opacity:1}
+  .list:hover .row:not(:hover) .desc,.list:hover .row:not(:hover) .mark{opacity:.45}
+  .mark{font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:-.02em;line-height:1.1;transition:opacity .35s var(--ease)}
+  .mark small{display:block;font:500 11px/1.4 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+  .desc{opacity:.8;max-width:560px;transition:opacity .35s var(--ease)}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+  .tags span{border:1px solid var(--pill);border-radius:99px;padding:5px 13px;font-size:13px;color:var(--muted);white-space:nowrap}
+  .badge{display:inline-block;margin-left:8px;vertical-align:middle;font:600 10px/1 Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);border:1px solid currentColor;border-radius:99px;padding:4px 7px}
+  .preview{position:fixed;left:0;top:0;width:440px;aspect-ratio:16/10;border-radius:20px;background:#1b1b1f;padding:14px;pointer-events:none;z-index:50;box-shadow:0 30px 80px -20px rgba(0,0,0,.6);opacity:0;transform:translate3d(-9999px,0,0);transition:opacity .3s var(--ease)}
+  .preview.on{opacity:1}
+  .preview .frame{width:100%;height:100%;border-radius:10px;overflow:hidden;position:relative;background:#fff}
+  .preview img,.concept{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;opacity:0;transform:scale(1.06);transition:opacity .45s var(--ease),transform .7s var(--ease)}
+  .preview .active{opacity:1;transform:none}
+  .concept{display:grid;place-items:center;background:radial-gradient(120% 90% at 20% 10%,#00c8e8 0%,#0f2040 55%,#0a1628 100%);color:#fff;font-family:var(--display);font-size:30px;font-weight:700;text-align:center;line-height:1.05}
+  .concept span{display:block;font:500 12px Inter,sans-serif;opacity:.7;margin-top:8px}
+
+  /* Why us */
+  .why{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;margin-top:44px}
+  .why div{background:var(--bg);padding:34px 30px 38px;transition:background .4s var(--ease)}
+  .why div:hover{background:var(--surface)}
+  .why b{display:block;font-family:var(--display);font-size:22px;letter-spacing:-.02em;margin:18px 0 10px}
+  .why p{color:var(--muted);font-size:14px}
+  .why .num{font:600 12px Inter;color:var(--accent);letter-spacing:.1em}
+
+  /* Team works strip */
+  .strip{overflow:hidden;margin-top:44px;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);cursor:grab}
+  .strip:active{cursor:grabbing}
+  .strip .track{display:flex;gap:18px;width:max-content;will-change:transform}
+  .tcard{width:300px;flex:none;border:1px solid var(--line);border-radius:18px;background:var(--surface);overflow:hidden;transition:transform .5s var(--ease),border-color .4s}
+  .tcard:hover{transform:translateY(-6px) rotate(-1deg);border-color:rgba(0,200,232,.4)}
+  .tcard .img{aspect-ratio:16/10;overflow:hidden;background:#fff}
+  .tcard img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .8s var(--ease);user-select:none;-webkit-user-drag:none}
+  .tcard:hover img{transform:scale(1.05)}
+  .tcard .body{padding:16px 18px 18px}
+  .tcard b{font-family:var(--display);font-size:18px;letter-spacing:-.01em}
+  .tcard .who{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px;margin-top:8px}
+  .tcard .av{width:22px;height:22px;border-radius:50%;background:var(--surface-2);display:grid;place-items:center;font-size:11px;color:var(--accent);border:1px solid var(--line)}
+  .strip-note{margin-top:14px;color:var(--muted);font-size:13px}
+
+  /* CTA */
+  .cta{border:1px solid var(--line);border-radius:28px;padding:72px 32px;text-align:center;position:relative;overflow:hidden;background:radial-gradient(80% 120% at 50% 120%,rgba(0,200,232,.18),transparent 60%),var(--surface)}
+  .cta h2{font-size:clamp(36px,6vw,76px);margin-bottom:22px}
+  .cta p{color:var(--muted);margin-bottom:30px}
+
+  /* Scroll reveal */
+  .rv{opacity:.4;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  .rv.in{opacity:1;transform:none}
+
+  .inline{display:none}
+  @media (max-width:760px){
+    header nav{display:none}
+    .row{grid-template-columns:1fr;gap:10px;padding:22px 20px}.tags{justify-content:flex-start}
+    .preview{display:none}
+    .inline{display:block;grid-row:2;border-radius:12px;overflow:hidden;max-height:0;transition:max-height .5s var(--ease)}
+    .inline img,.inline .concept{position:static;opacity:1;transform:none;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}
+    .row.open .inline{max-height:320px}
+    .why{grid-template-columns:1fr}
+    .sec{padding:72px 0}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1;transform:none}h1 .w>span{transform:none}}
+
+  .proto-banner{background:#00c8e8;color:#0a1628;font:500 13px/1.4 Inter,system-ui,sans-serif;text-align:center;padding:8px 16px}
+  .proto-banner b{font-weight:700}
+</style>
+</head>
+<body>
+<div class="proto-banner"><b>Tasarım prototipi.</b> CyberSense Laboratuvarı portföy bölümü için hazırlanan bir taslaktır; metinler, rakamlar ve yorumlar örnektir.</div>
+<header><div class="wrap">
+  <span class="logo">CyberSense<i>.</i>Lab</span>
+  <nav><a>Ana sayfa</a><a>Projeler</a><a class="on">Portfolyo</a><a>Ekip</a><a>Yayınlar</a><a>İletişim</a></nav>
+</div></header>
+
+<!-- 1. HERO -->
+<section class="hero">
+  <span class="annot">1 · Hero: kelimeler sırayla beliriyor, ışık imleci takip ediyor</span>
+  <div class="gridbg"></div><div class="glow" id="glow"></div>
+  <div class="wrap">
+    <span class="kicker">CyberSense Laboratuvarı · Çalışmalar</span>
+    <h1 id="h1">Fikirden yayına, <em>güvenli</em> dijital çözümler.</h1>
+    <p class="lede">Kurumlar ve işletmeler için web siteleri, uygulamalar ve yönetim panelleri geliştiriyoruz. Arkasında siber güvenlik ve yapay zekâ araştırması olan bir ekiple.</p>
+    <div class="actions"><a class="btn btn-primary" href="#teklif">Teklif isteyin →</a><a class="btn btn-ghost" href="#isler">Çalışmaları görün</a></div>
+  </div>
+  <div class="marquee"><div class="track">
+    <span>Kurumsal web siteleri</span><span>Mobil uygulamalar</span><span>Yönetim panelleri</span><span>Rezervasyon sistemleri</span><span>Siber güvenlik</span><span>Yapay zekâ entegrasyonu</span><span>IoT çözümleri</span>
+    <span>Kurumsal web siteleri</span><span>Mobil uygulamalar</span><span>Yönetim panelleri</span><span>Rezervasyon sistemleri</span><span>Siber güvenlik</span><span>Yapay zekâ entegrasyonu</span><span>IoT çözümleri</span>
+  </div></div>
+</section>
+
+<!-- 2. WORKS -->
+<section class="sec" id="isler"><div class="wrap">
+  <span class="annot">2 · Seçilmiş çalışmalar: editoryal liste + takip eden önizleme</span>
+  <div class="head rv"><div><span class="kicker">seçilmiş çalışmalar</span><h2>Kurumlar için<br>geliştirdiklerimiz.</h2></div><p>Her biri gerçek bir ihtiyaçtan doğdu. Detayında problemi, çözümü ve sonucu anlatıyoruz.</p></div>
+  <div class="list rv" id="list">
+    <div class="row" data-img="ocak-otomotiv-hero.png" data-href="vaka-detay.html"><div class="mark">Ocak Otomotiv<span class="badge">Detayı aç</span><small>Otomotiv</small></div><p class="desc">Yerel bir otomotiv firması için hizmetleri, iletişimi ve marka kimliğini tek yerde toplayan mobil öncelikli kurumsal site.</p><div class="tags"><span>Tasarım</span><span>Geliştirme</span></div></div>
+    <div class="row" data-img="corporate-intranet-dashboard.png"><div class="mark">Kurumsal İntranet<small>İnsan kaynakları</small></div><p class="desc">Duyuruları, izin taleplerini ve çalışan rehberini tek panelde toplayan iç iletişim platformu.</p><div class="tags"><span>Fullstack</span><span>Güvenlik</span></div></div>
+    <div class="row" data-concept="Otel&nbsp;Rezervasyon|Konsept çalışma"><div class="mark">Otel Rezervasyon<span class="badge">Konsept</span><small>Turizm</small></div><p class="desc">Butik oteller için oda vitrini ve doğrudan rezervasyon akışı. Sektöre yönelik hazırladığımız örnek çalışma.</p><div class="tags"><span>Tasarım</span><span>Etkileşim</span></div></div>
+    <div class="row" data-img="primeware-hero.png"><div class="mark">Primeware<small>Yazılım</small></div><p class="desc">Bir yazılım firmasının hizmetlerini ve referanslarını anlatan kurumsal site.</p><div class="tags"><span>Tasarım</span><span>Geliştirme</span></div></div>
+  </div>
+</div></section>
+
+<!-- 3. WHY US -->
+<section class="sec" style="padding-top:0"><div class="wrap">
+  <span class="annot">3 · Fark: rakiplerde olmayan şey</span>
+  <div class="rv"><span class="kicker">neden biz</span><h2>Bir ajans değil,<br>bir <em>araştırma laboratuvarı</em>.</h2></div>
+  <div class="why rv">
+    <div><span class="num">01</span><b>Güvenlik baştan</b><p>Her proje, siber güvenlik araştırması yapan bir ekibin standartlarıyla geliştirilir: güvenli altyapı, veri koruma, KVKK uyumu.</p></div>
+    <div><span class="num">02</span><b>Akıllı çözümler</b><p>Yapay zekâ ve IoT alanındaki araştırma birikimimizi gerektiğinde ürüne taşırız: öneri sistemleri, otomasyon, veri analizi.</p></div>
+    <div><span class="num">03</span><b>Uçtan uca ekip</b><p>Tasarım, web, mobil ve yönetim paneli tek çatı altında. Fikirden yayına kadar tek bir muhatap.</p></div>
+  </div>
+</div></section>
+
+<!-- 4. TEAM WORKS -->
+<section class="sec" style="padding-top:0"><div class="wrap">
+  <span class="annot">4 · Ekip çalışmaları: kayan şerit, sürüklenebilir</span>
+  <div class="head rv"><div><span class="kicker">ekip çalışmaları</span><h2>Ekibimizin elinden.</h2></div><p>Katılımcılarımızın kişisel ve akademik projeleri. Yetkinliklerimizin genişliği burada.</p></div>
+</div>
+  <div class="strip rv" id="strip"><div class="track" id="track"></div></div>
+  <div class="wrap"><p class="strip-note">Şerit kendi kendine yavaşça akıyor. Üzerine gelince duruyor, sürükleyerek gezilebiliyor.</p></div>
+</section>
+
+<!-- 5. CTA -->
+<section class="sec" style="padding-top:0" id="teklif"><div class="wrap">
+  <span class="annot">5 · Teklif çağrısı</span>
+  <div class="cta rv">
+    <span class="kicker">bir sonraki proje</span>
+    <h2>Projenizi <em>konuşalım</em>.</h2>
+    <p>Birkaç cümleyle anlatın; size kapsam ve tahmini süreyle dönelim.</p>
+    <a class="btn btn-primary" href="#">Teklif isteyin →</a>
+  </div>
+</div></section>
+
+<div class="preview" id="preview"><div class="frame" id="frame"></div></div>
+
+<script>
+  // Hero: split headline into words, reveal on load; glow follows cursor
+  const h1 = document.getElementById('h1');
+  h1.innerHTML = h1.innerHTML.split(/(<em>.*?<\/em>|\s+)/).filter(s => s && !/^\s+$/.test(s))
+    .map((w, i) => `<span class="w"><span style="transition-delay:${i * 70}ms">${w}</span></span>`).join(' ');
+  requestAnimationFrame(() => setTimeout(() => document.body.classList.add('loaded'), 80));
+  const hero = document.querySelector('.hero'), glow = document.getElementById('glow');
+  let gx = innerWidth / 2, gy = innerHeight * .4, gtx = gx, gty = gy;
+  hero.addEventListener('mousemove', e => { const r = hero.getBoundingClientRect(); gtx = e.clientX - r.left; gty = e.clientY - r.top; });
+
+  // Works list preview
+  const list = document.getElementById('list'), preview = document.getElementById('preview'), frame = document.getElementById('frame');
+  const rows = [...list.querySelectorAll('.row')];
+  const layers = rows.map(row => {
+    let el;
+    if (row.dataset.img) { el = document.createElement('img'); el.src = '' + row.dataset.img; el.alt = ''; }
+    else { const [t, s] = row.dataset.concept.split('|'); el = document.createElement('div'); el.className = 'concept'; el.innerHTML = t + '<span>' + s + '</span>'; }
+    frame.appendChild(el);
+    const inline = document.createElement('div'); inline.className = 'inline'; inline.appendChild(el.cloneNode(true)); row.appendChild(inline);
+    return el;
+  });
+  let tx = 0, ty = 0, x = 0, y = 0, sc = .85, tsc = .85, active = false;
+  list.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; if (!active) { x = tx; y = ty; } });
+  rows.forEach((row, i) => {
+    row.addEventListener('mouseenter', () => { layers.forEach((l, j) => l.classList.toggle('active', i === j)); active = true; tsc = 1; preview.classList.add('on'); });
+    row.addEventListener('click', () => { if (row.dataset.href && matchMedia('(min-width:761px)').matches) location.href = row.dataset.href; else row.classList.toggle('open'); });
+  });
+  list.addEventListener('mouseleave', () => { active = false; tsc = .85; preview.classList.remove('on'); });
+
+  // Team strip: auto-drift, pause on hover, drag
+  const team = [
+    ['triply-splash.png', 'Triply', 'Yusuf Gülmez', 'Mobil'], ['green-world-01-screens.png', 'Green World', 'Yusuf Gülmez', 'Mobil'],
+    ['g-mentor-mentee-dashboard.png', 'G-Mentor', 'Rıfat Öztürk', 'Web'], ['flutter-news-home.png', 'Flutter Haber', 'Hamza Alhadeethi', 'Mobil'],
+    ['our-community-hero.png', 'Our Community', 'Hamza Alhadeethi', 'Web'], ['det-portfolio-01-cover.png', 'DesignEveryThink', 'Yusuf Gülmez', 'Tasarım'],
+    ['hamza-portfolio-hero.png', 'Kişisel Portfolyo', 'Hamza Alhadeethi', 'Fullstack'],
+  ];
+  const track = document.getElementById('track'), strip = document.getElementById('strip');
+  const card = ([img, t, who, cat]) => `<a class="tcard"><div class="img"><img src="${img}" alt=""></div><div class="body"><b>${t}</b><div class="who"><span class="av">${who[0]}</span>${who} · ${cat}</div></div></a>`;
+  track.innerHTML = [...team, ...team].map(card).join('');
+  let off = 0, vel = .35, hover = false, drag = false, lastX = 0, dragV = 0;
+  strip.addEventListener('mouseenter', () => hover = true);
+  strip.addEventListener('mouseleave', () => { hover = false; drag = false; });
+  strip.addEventListener('pointerdown', e => { drag = true; lastX = e.clientX; strip.setPointerCapture(e.pointerId); });
+  strip.addEventListener('pointermove', e => { if (!drag) return; dragV = e.clientX - lastX; off -= dragV; lastX = e.clientX; });
+  strip.addEventListener('pointerup', () => drag = false);
+
+  // Scroll reveal
+  const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && (e.target.classList.add('in'), io.unobserve(e.target))), { threshold: .15 });
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+  let cur = .35;
+  (function loop() {
+    gx += (gtx - gx) * .06; gy += (gty - gy) * .06; glow.style.transform = `translate(${gx - 310}px, ${gy - 310}px)`;
+    const dx = tx - x; x += dx * .14; y += (ty - y) * .14; sc += (tsc - sc) * .15;
+    preview.style.transform = `translate3d(${x + 28}px, ${y - 137}px, 0) rotate(${Math.max(-8, Math.min(8, dx * .06))}deg) scale(${sc})`;
+    cur += ((hover ? 0 : vel) - cur) * .05;
+    if (!drag) { off += cur - dragV; dragV *= .92; }
+    const half = track.scrollWidth / 2; off = ((off % half) + half) % half;
+    track.style.transform = `translate3d(${-off}px,0,0)`;
+    requestAnimationFrame(loop);
+  })();
+  const at = document.createElement("button"); at.className = "annot-toggle"; at.type = "button"; at.textContent = "Notları gizle";
+  at.onclick = () => { const off = document.body.classList.toggle("no-annot"); at.textContent = off ? "Notları göster" : "Notları gizle"; };
+  document.body.appendChild(at);
+</script>
+</body>
+</html>

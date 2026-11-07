@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ocak Otomotiv Vaka Prototipi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0a1628;--surface:#0f2040;--surface-2:#132a4f;--line:rgba(255,255,255,.09);--text:#e8eef6;--muted:rgba(232,238,246,.55);
+    --accent:#00c8e8;--pill:rgba(255,255,255,.14);--ease:cubic-bezier(.22,1,.36,1);--display:"Bricolage Grotesque",Inter,system-ui,sans-serif;color-scheme:dark}
+  .no-annot .annot{display:none}
+  .annot-toggle{position:fixed;right:calc(20px + env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:90;font:500 13px Inter,system-ui,sans-serif;background:#132a4f;color:#e8eef6;border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:9px 16px;cursor:pointer}
+  .annot-toggle:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid #00c8e8;outline-offset:3px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  .kicker{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:14px;margin-bottom:16px}
+  .kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,3.6vw,44px);line-height:1.05;letter-spacing:-.03em}
+  em{font-style:normal;color:var(--accent)}
+  .btn{display:inline-flex;align-items:center;gap:8px;border-radius:99px;padding:12px 20px;font-weight:600;font-size:15px;transition:transform .35s var(--ease)}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--accent);color:#0a1628}.btn-ghost{border:1px solid var(--pill)}
+  .annot{position:absolute;right:24px;top:20px;font-size:11px;color:var(--accent);border:1px dashed rgba(0,200,232,.45);border-radius:8px;padding:4px 8px;background:rgba(10,22,40,.85);z-index:3;max-width:330px}
+  section{position:relative}
+
+  /* progress + sticky bar */
+  .progress{position:fixed;top:0;left:0;height:2px;background:var(--accent);width:0;z-index:60}
+  .bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(10,22,40,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .bar .wrap{display:flex;justify-content:space-between;align-items:center;height:60px;font-size:14px;gap:16px}
+  .bar .back{color:var(--muted);transition:color .3s}.bar .back:hover{color:var(--text)}
+  .bar .title{font-family:var(--display);font-weight:700;opacity:0;transform:translateY(6px);transition:.4s var(--ease)}
+  .bar.scrolled .title{opacity:1;transform:none}
+  .bar .btn{padding:8px 16px;font-size:13px}
+
+  /* Hero */
+  .hero{padding:72px 0 0}
+  .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(48px,9vw,128px);line-height:.92;letter-spacing:-.05em;margin-bottom:26px}
+  .hero .sum{font-size:clamp(18px,2vw,22px);max-width:720px;color:rgba(232,238,246,.82);line-height:1.45}
+  .meta{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:48px}
+  .meta div{padding:20px 0 22px;border-left:1px solid var(--line);padding-left:20px}
+  .meta div:first-child{border-left:0;padding-left:0}
+  .meta small{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .live{display:inline-flex;align-items:center;gap:8px}
+  .live::before{content:"";width:8px;height:8px;border-radius:50%;background:#2fd47a;box-shadow:0 0 0 0 rgba(47,212,122,.6);animation:pulse 2s infinite}
+  @keyframes pulse{70%{box-shadow:0 0 0 8px rgba(47,212,122,0)}100%{box-shadow:0 0 0 0 rgba(47,212,122,0)}}
+  .cover{margin-top:56px;perspective:1400px}
+  .browser{border-radius:18px;background:#1b1b1f;padding:12px;box-shadow:0 50px 120px -40px rgba(0,0,0,.7);transform-origin:50% 0;will-change:transform}
+  .browser .dots{display:flex;gap:6px;padding:2px 4px 10px}.browser .dots i{width:10px;height:10px;border-radius:50%;background:#3a3a40}
+  .browser img{display:block;width:100%;border-radius:8px}
+
+  /* Story: sticky left, steps right */
+  .story{padding:130px 0 40px}
+  .story .grid{display:grid;grid-template-columns:320px 1fr;gap:64px}
+  .story aside{position:sticky;top:110px;align-self:start}
+  .steps-nav{list-style:none;margin-top:28px;border-left:1px solid var(--line)}
+  .steps-nav li{padding:8px 0 8px 18px;color:var(--muted);position:relative;transition:color .3s;cursor:pointer}
+  .steps-nav li::before{content:"";position:absolute;left:-1px;top:0;bottom:0;width:2px;background:var(--accent);transform:scaleY(0);transition:transform .4s var(--ease)}
+  .steps-nav li.on{color:var(--text)}.steps-nav li.on::before{transform:none}
+  .step{padding:0 0 110px}
+  .step .n{font:600 12px Inter;letter-spacing:.12em;color:var(--accent);text-transform:uppercase}
+  .step h3{font-family:var(--display);font-size:clamp(26px,3vw,38px);letter-spacing:-.025em;line-height:1.1;margin:12px 0 18px}
+  .step p{color:rgba(232,238,246,.78);max-width:620px;margin-bottom:14px}
+  .step ul{list-style:none;margin-top:20px;display:grid;gap:10px}
+  .step li{display:flex;gap:12px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+  .step li::before{content:"✦";color:var(--accent);font-size:11px;margin-top:5px}
+
+  /* Gallery */
+  .gallery{padding:40px 0 120px}
+  .g-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:18px;margin-top:40px}
+  .shot{border-radius:18px;overflow:hidden;background:var(--surface);border:1px solid var(--line);position:relative;cursor:zoom-in}
+  .shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform 1s var(--ease)}
+  .shot:hover img{transform:scale(1.04)}
+  .shot.tall{grid-row:span 2}
+  .ph{display:grid;place-items:center;min-height:240px;color:var(--muted);font-size:13px;background:repeating-linear-gradient(135deg,var(--surface),var(--surface) 12px,var(--surface-2) 12px,var(--surface-2) 24px)}
+  .phone{width:200px;aspect-ratio:9/19;border-radius:30px;border:8px solid #1b1b1f;margin:30px auto;background:var(--surface-2);display:grid;place-items:center;color:var(--muted);font-size:12px;text-align:center}
+
+  /* Results */
+  .results{padding:0 0 120px}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden;margin-top:40px}
+  .stats div{background:var(--bg);padding:36px 30px}
+  .stats b{display:block;font-family:var(--display);font-size:clamp(40px,5vw,64px);letter-spacing:-.04em;line-height:1;color:var(--text)}
+  .stats b span{color:var(--accent)}
+  .stats p{color:var(--muted);margin-top:10px;font-size:14px}
+  blockquote{margin-top:56px;border-left:2px solid var(--accent);padding:6px 0 6px 28px;max-width:820px}
+  blockquote p{font-family:var(--display);font-size:clamp(22px,2.6vw,32px);line-height:1.25;letter-spacing:-.02em}
+  blockquote footer{margin-top:16px;color:var(--muted);font-size:14px}
+
+  /* Stack + team */
+  .credits{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding-bottom:120px}
+  .card{border:1px solid var(--line);border-radius:22px;background:var(--surface);padding:30px}
+  .card h4{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:18px}
+  .pills{display:flex;flex-wrap:wrap;gap:8px}.pills span{border:1px solid var(--pill);border-radius:99px;padding:6px 14px;font-size:14px}
+  .person{display:flex;align-items:center;gap:12px;padding:8px 0}
+  .person .av{width:40px;height:40px;border-radius:50%;background:var(--surface-2);border:1px solid var(--line);display:grid;place-items:center;color:var(--accent);font-weight:600}
+  .person small{display:block;color:var(--muted)}
+
+  /* Next project */
+  .next{display:block;border-top:1px solid var(--line);padding:90px 0 110px;position:relative;overflow:hidden}
+  .next small{color:var(--muted);font-size:14px}
+  .next .t{font-family:var(--display);font-weight:700;font-size:clamp(44px,8vw,112px);letter-spacing:-.05em;line-height:.95;display:flex;align-items:center;gap:24px;transition:transform .6s var(--ease)}
+  .next .t i{font-style:normal;color:var(--accent);transform:translateX(-20px);opacity:0;transition:.6s var(--ease)}
+  .next:hover .t{transform:translateX(16px)}.next:hover .t i{opacity:1;transform:none}
+  .next .peek{position:absolute;right:6%;top:50%;width:360px;border-radius:14px;overflow:hidden;transform:translateY(-40%) rotate(4deg) scale(.9);opacity:0;transition:.6s var(--ease);box-shadow:0 30px 80px -20px rgba(0,0,0,.6)}
+  .next:hover .peek{opacity:1;transform:translateY(-50%) rotate(2deg)}
+  .next .peek img{display:block;width:100%}
+
+  /* Reveal + entry transition */
+  .rv{opacity:.4;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.rv.in{opacity:1;transform:none}
+  .fly{position:fixed;z-index:80;border-radius:20px;overflow:hidden;background:#1b1b1f;padding:14px;transition:all .9s var(--ease);box-shadow:0 30px 80px -20px rgba(0,0,0,.6)}
+  .fly img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:10px;display:block}
+  .replay{position:fixed;left:calc(20px + env(safe-area-inset-left,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:70;font:500 13px Inter;background:var(--surface-2);color:var(--text);border:1px solid var(--pill);border-radius:99px;padding:9px 16px;cursor:pointer}
+
+  @media (max-width:860px){
+    .meta{grid-template-columns:1fr 1fr}.meta div:nth-child(3){border-left:0;padding-left:0}
+    .story .grid{grid-template-columns:1fr}.story aside{position:static}.steps-nav{display:none}
+    .g-grid,.stats,.credits{grid-template-columns:1fr}.shot.tall{grid-row:auto}.next .peek{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1;transform:none}}
+
+  .proto-banner{background:#00c8e8;color:#0a1628;font:500 13px/1.4 Inter,system-ui,sans-serif;text-align:center;padding:8px 16px}
+  .proto-banner b{font-weight:700}
+</style>
+</head>
+<body>
+<div class="proto-banner"><b>Tasarım prototipi.</b> CyberSense Laboratuvarı portföy bölümü için hazırlanan bir taslaktır; metinler, rakamlar ve yorumlar örnektir.</div>
+<div class="progress" id="progress"></div>
+<button class="replay" id="replay">↺ Listeden geçişi tekrar oynat</button>
+
+<div class="bar" id="bar"><div class="wrap">
+  <a class="back" href="./">← Tüm çalışmalar</a>
+  <span class="title">Ocak Otomotiv</span>
+  <a class="btn btn-primary" href="#">Benzer bir proje isteyin</a>
+</div></div>
+
+<!-- 1. HERO -->
+<section class="hero"><div class="wrap">
+  <span class="annot">1 · Listeden tıklayınca önizleme kartı büyüyüp bu kapak görseline dönüşüyor (sol alttaki düğmeyle tekrar oynatılabilir)</span>
+  <span class="kicker">vaka çalışması · otomotiv</span>
+  <h1>Ocak Otomotiv</h1>
+  <p class="sum">Yerel bir otomotiv firmasının hizmetlerini, iletişimini ve marka kimliğini tek yerde toplayan, mobil öncelikli kurumsal web sitesi.</p>
+  <div class="meta">
+    <div><small>Sektör</small>Otomotiv</div>
+    <div><small>Hizmetler</small>Tasarım, geliştirme</div>
+    <div><small>Yıl</small>2026</div>
+    <div><small>Durum</small><a class="live" href="#">Yayında ↗</a></div>
+  </div>
+  <div class="cover"><div class="browser" id="browser"><div class="dots"><i></i><i></i><i></i></div><img id="coverImg" src="ocak-otomotiv-hero.png" alt=""></div></div>
+</div></section>
+
+<!-- 2. STORY -->
+<section class="story"><div class="wrap">
+  <span class="annot">2 · Hikâye: soldaki başlık sabit kalıyor, kaydırdıkça aktif adım işaretleniyor</span>
+  <div class="grid">
+    <aside class="rv">
+      <span class="kicker">hikâye</span>
+      <h2>Problemden<br><em>sonuca</em>.</h2>
+      <ol class="steps-nav" id="stepsNav"><li data-t="s1">Bağlam</li><li data-t="s2">Problem</li><li data-t="s3">Yaklaşım</li><li data-t="s4">Çözüm</li></ol>
+    </aside>
+    <div>
+      <div class="step rv" id="s1"><span class="n">01 · Bağlam</span><h3>Bölgede tanınan bir firma, internette görünmüyordu.</h3><p>Örnek metin: Firmanın müşterilerinin büyük kısmı tavsiye yoluyla geliyordu; web sitesi yoktu, hizmet bilgileri sosyal medyaya dağılmıştı.</p></div>
+      <div class="step rv" id="s2"><span class="n">02 · Problem</span><h3>Müşteriler doğru bilgiye ulaşamıyor, telefonla soruyordu.</h3><p>Örnek metin: Hangi hizmetlerin verildiği, çalışma saatleri ve konum gibi temel bilgiler için bile arama yapılması gerekiyordu.</p></div>
+      <div class="step rv" id="s3"><span class="n">03 · Yaklaşım</span><h3>Önce mobil, önce iletişim.</h3><p>Örnek metin: Ziyaretçilerin çoğunun telefondan geleceğini varsayarak tasarımı mobilden başlattık; her sayfada tek dokunuşla arama ve yol tarifi.</p></div>
+      <div class="step rv" id="s4"><span class="n">04 · Çözüm</span><h3>Hızlı, yönetilebilir bir kurumsal site.</h3>
+        <ul><li>Hizmet sayfaları ve fiyat bilgisi için düzenli yapı</li><li>Tek dokunuşla arama, WhatsApp ve harita</li><li>Arama motorlarında görünürlük için temel SEO</li></ul></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 3. GALLERY -->
+<section class="gallery"><div class="wrap">
+  <span class="annot">3 · Galeri: masaüstü ve mobil ekranlar karışık boyutlarda, tıklayınca büyüyor</span>
+  <div class="rv"><span class="kicker">ekranlar</span><h2>Yakından bakın.</h2></div>
+  <div class="g-grid rv">
+    <div class="shot"><img src="ocak-otomotiv-hero.png" alt=""></div>
+    <div class="shot tall ph"><div class="phone">Mobil<br>ekran görüntüsü</div></div>
+    <div class="shot ph">Hizmetler sayfası görseli</div>
+  </div>
+</div></section>
+
+<!-- 4. RESULTS -->
+<section class="results"><div class="wrap">
+  <span class="annot">4 · Sonuç: sayılar görününce sayarak artıyor. Sadece gerçek veri varsa gösterilir, yoksa bölüm gizlenir</span>
+  <div class="rv"><span class="kicker">sonuç</span><h2>Ne değişti?</h2></div>
+  <div class="stats rv">
+    <div><b><span class="count" data-to="3">0</span> hafta</b><p>Fikirden yayına süre (örnek)</p></div>
+    <div><b><span class="count" data-to="95">0</span>+</b><p>Mobil performans puanı (örnek)</p></div>
+    <div><b><span class="count" data-to="40">0</span>%</b><p>Telefonla gelen soru sayısında azalma (örnek)</p></div>
+  </div>
+  <blockquote class="rv"><p>"Örnek müşteri yorumu: artık müşterilerimiz bizi aramadan önce ne aradığını biliyor."</p><footer>Müşteri adı · Unvan (sadece izinli, gerçek yorum)</footer></blockquote>
+</div></section>
+
+<!-- 5. CREDITS -->
+<section><div class="wrap credits">
+  <span class="annot">5 · Teknolojiler ve ekip: katılımcıların emeği burada görünür</span>
+  <div class="card rv"><h4>Teknolojiler</h4><div class="pills"><span>React</span><span>Tailwind</span><span>Vercel</span><span>SEO</span></div></div>
+  <div class="card rv"><h4>Ekip</h4><div class="person"><span class="av">M</span><div>Moataz<small>Tasarım ve geliştirme</small></div></div></div>
+</div></section>
+
+<!-- 6. NEXT -->
+<a class="next" href="#"><div class="wrap">
+  <span class="annot">6 · Sonraki proje: ziyaretçi sayfa bitince ayrılmak yerine sıradaki işe geçiyor</span>
+  <small>Sonraki çalışma</small>
+  <div class="t">Kurumsal İntranet <i>→</i></div>
+</div><div class="peek"><img src="corporate-intranet-dashboard.png" alt=""></div></a>
+
+<script>
+  const bar = document.getElementById('bar'), progress = document.getElementById('progress'), browser = document.getElementById('browser');
+  const steps = [...document.querySelectorAll('.step')], navItems = [...document.querySelectorAll('#stepsNav li')];
+  navItems.forEach(li => li.onclick = () => document.getElementById(li.dataset.t).scrollIntoView({ behavior: 'smooth', block: 'center' }));
+
+  function onScroll() {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    progress.style.width = (scrollY / max * 100) + '%';
+    bar.classList.toggle('scrolled', scrollY > 260);
+    // cover: subtle tilt-to-flat as it enters
+    const r = browser.getBoundingClientRect(), p = Math.min(1, Math.max(0, 1 - (r.top - 120) / innerHeight));
+    browser.style.transform = `rotateX(${(1 - p) * 14}deg) scale(${.92 + p * .08})`;
+    // active story step
+    let cur = 0; steps.forEach((s, i) => { if (s.getBoundingClientRect().top < innerHeight * .5) cur = i; });
+    navItems.forEach((li, i) => li.classList.toggle('on', i === cur));
+  }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('in');
+    e.target.querySelectorAll('.count').forEach(c => {
+      const to = +c.dataset.to, t0 = performance.now();
+      (function tick(t) { const k = Math.min(1, (t - t0) / 1400), ease = 1 - Math.pow(1 - k, 4); c.textContent = Math.round(to * ease); if (k < 1) requestAnimationFrame(tick); })(t0);
+    });
+    io.unobserve(e.target);
+  }), { threshold: .2 });
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+  // Entry transition: list preview card (cursor-sized) grows into the cover image.
+  function playEntry() {
+    scrollTo(0, 0);
+    const target = document.getElementById('coverImg').getBoundingClientRect();
+    const fly = document.createElement('div'); fly.className = 'fly';
+    fly.innerHTML = '<img src="ocak-otomotiv-hero.png" alt="">';
+    Object.assign(fly.style, { left: (innerWidth * .55) + 'px', top: (innerHeight * .35) + 'px', width: '440px', height: '275px', transform: 'rotate(4deg)' });
+    document.body.appendChild(fly);
+    document.querySelector('.hero .wrap').style.opacity = 0;
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      Object.assign(fly.style, { left: (target.left - 12) + 'px', top: (target.top - 12) + 'px', width: (target.width + 24) + 'px', height: (target.height + 24) + 'px', transform: 'none', borderRadius: '18px' });
+      setTimeout(() => { const w = document.querySelector('.hero .wrap'); w.style.transition = 'opacity .6s'; w.style.opacity = 1; }, 450);
+      setTimeout(() => { fly.style.opacity = 0; setTimeout(() => fly.remove(), 400); }, 950);
+    }));
+  }
+  document.getElementById('replay').onclick = playEntry;
+  addEventListener('load', playEntry);
+  const at = document.createElement("button"); at.className = "annot-toggle"; at.type = "button"; at.textContent = "Notları gizle";
+  at.onclick = () => { const off = document.body.classList.toggle("no-annot"); at.textContent = off ? "Notları göster" : "Notları gizle"; };
+  document.body.appendChild(at);
+</script>
+</body>
+</html>
